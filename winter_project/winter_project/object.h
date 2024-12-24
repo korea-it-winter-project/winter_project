@@ -1,0 +1,3 @@
+class object {
+	bool rig;
+};
