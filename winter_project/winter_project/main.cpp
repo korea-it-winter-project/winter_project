@@ -5,7 +5,8 @@
 #include <time.h>
 #include <math.h>
 #include "init.h"
-
+#include "resource.h"
+HINSTANCE hInst;;
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 HINSTANCE g_hInst;                              //인스턴스 핸들
@@ -58,9 +59,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 #define swap(x,y) temp = x; x=y;y=temp;
 
 
-//double lengthpts(int x1, int y1, int x2, int y2) {
-//    return(sqrt((float)((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))));
-//}
+double lengthpts(int x1, int y1, int x2, int y2) {
+    return(sqrt((float)((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))));
+}
 //bool inCircle(int x, int y, int mx, int my) {
 //    if (lengthpts(x, y, mx, my) <= Bsize) return true;
 //    return false;
@@ -73,26 +74,47 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
     //SetTimer(hWnd, number, ms, NULL); 
      //wsprintf(LPOUT, TEXT("%d : %d"), df.x, df.y);
     //TextOut(hdc, 100, 100, LPOUT,lstrlen(LPOUT));
-    HDC hdc, MemDC, ImgDC;
+    HDC hdc, bufferDC, bufferDC2;
+    static HBITMAP hBit1, hBit2, oldBit1, oldBit2;
     PAINTSTRUCT ps;
     HBRUSH MyBrush, OldBrush;
-
+    RECT rectView;
     HPEN Hpen, oldpen;
     HBRUSH hB, oB;
+    static bool mouse_truck;
     static player pc;
+    static Vector2 mouse_pos;
     WCHAR text[1024];
 
     
 
     switch (iMessage) {
     case WM_CREATE:
+        //hBit1 = hBit2 = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP1));
         SetTimer(hWnd, 1, 1, NULL);
     case WM_SIZE:
-        //GetClientRect(hWnd, &rectView);
+        GetClientRect(hWnd, &rectView);
         break;
     case WM_TIMER:
-        
-        InvalidateRect(hWnd, NULL, TRUE);
+        pc.dir.x = pc.pos.x - mouse_pos.x;
+        pc.dir.y = pc.pos.y - mouse_pos.y;
+
+        pc.dir.x = pc.dir.x / lengthpts(pc.pos.x, pc.pos.y, mouse_pos.x, mouse_pos.y);
+        pc.dir.y = pc.dir.y / lengthpts(pc.pos.x, pc.pos.y, mouse_pos.x, mouse_pos.y);
+        InvalidateRect(hWnd, NULL, true);
+        break;
+    case WM_LBUTTONDOWN:
+        mouse_truck = true; break;
+    case WM_MOUSEMOVE:
+        if (mouse_truck) {
+            mouse_pos.x=LOWORD(lParam), mouse_pos.y = HIWORD(lParam);
+
+            InvalidateRect(hWnd, NULL, false);
+        }
+
+        break;
+    case WM_LBUTTONUP:
+        mouse_truck = false;
         break;
     case WM_KEYDOWN:
         /*switch (wParam) {
@@ -106,15 +128,34 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
         if(GetAsyncKeyState('A')|| GetAsyncKeyState(VK_LEFT))pc.pos.x -= 1;
         if(GetAsyncKeyState('S')|| GetAsyncKeyState(VK_DOWN))pc.pos.y += 1;
         if(GetAsyncKeyState('D')|| GetAsyncKeyState(VK_RIGHT))pc.pos.x += 1;
-        InvalidateRect(hWnd, NULL, TRUE);
+        InvalidateRect(hWnd, NULL,true);
         break;
     case WM_PAINT:
         hdc = BeginPaint(hWnd, &ps);
-        wsprintf(text, L"%d : %d    %d : %d", 
-            (int)pc.pos.x,  (int)pc.pos.y,(int)pc.before_pos.x, (int)pc.before_pos.y);
-        TextOut(hdc, 100, 100, text, lstrlen(text));
+        bufferDC = CreateCompatibleDC(hdc);
+        bufferDC2 = CreateCompatibleDC(bufferDC);
+        if (hBit1 == NULL)
+            hBit1 = CreateCompatibleBitmap(hdc, 800, 500);
+        oldBit1 = (HBITMAP)SelectObject(bufferDC, hBit1);
+        oldBit2 = (HBITMAP)SelectObject(bufferDC2, hBit2);
 
-        Ellipse(hdc, pc.pos.x - pc_size, pc.pos.y- pc_size, pc.pos.x + pc_size, pc.pos.y + pc_size);
+        BitBlt(bufferDC, 0, 0, 800, 500, bufferDC2, 0, 0, SRCCOPY);
+
+        		//투명한 배경색 사용 SetBackGroundMode
+        wsprintf(text, L"%d : %d  %d : %d   %d.%d : %d.%d",
+            (int)pc.pos.x, (int)pc.pos.y, (int)mouse_pos.x, (int)mouse_pos.y,
+            (int)pc.dir.x, (int)(pc.dir.x * 100) % 100,
+            (int)pc.dir.y, (int)(pc.dir.y * 100) % 100);
+        TextOut(bufferDC, 100, 100, text, lstrlen(text));
+        Ellipse(bufferDC, pc.pos.x - pc_size, pc.pos.y - pc_size, pc.pos.x + pc_size, pc.pos.y + pc_size);
+        Ellipse(bufferDC, (int)mouse_pos.x - 5, (int)mouse_pos.y - 5, (int)mouse_pos.x + 5, (int)mouse_pos.y + 5);
+        BitBlt(hdc, 0, 0, 800, 500, bufferDC, 0, 0, SRCCOPY);
+
+        SelectObject(bufferDC, oldBit1);
+        SelectObject(bufferDC2, oldBit2);
+        DeleteDC(bufferDC);
+        DeleteDC(bufferDC2);
+        //EndPaint(hwnd, &ps);
 
         EndPaint(hWnd, &ps);
 
