@@ -3,5 +3,5 @@ class Npc {
 	int speed;
 	int dmg;
 public:
-	void get_hp() { return hp; }
+	
 };

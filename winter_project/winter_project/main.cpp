@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include "init.h"
 
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
@@ -50,20 +51,20 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     }
     return (int)Message.wParam;                     //탈출 코드. 프로그램 종료
 }
-#define Bsize 25
+#define pc_size 25
 #define Bsize2 10
 #define rc 13
 #define re 15
 #define swap(x,y) temp = x; x=y;y=temp;
 
 
-double lengthpts(int x1, int y1, int x2, int y2) {
-    return(sqrt((float)((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))));
-}
-bool inCircle(int x, int y, int mx, int my) {
-    if (lengthpts(x, y, mx, my) <= Bsize) return true;
-    return false;
-}
+//double lengthpts(int x1, int y1, int x2, int y2) {
+//    return(sqrt((float)((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))));
+//}
+//bool inCircle(int x, int y, int mx, int my) {
+//    if (lengthpts(x, y, mx, my) <= Bsize) return true;
+//    return false;
+//}
 
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
@@ -78,33 +79,49 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 
     HPEN Hpen, oldpen;
     HBRUSH hB, oB;
+    static player pc;
+    WCHAR text[1024];
 
-
-
-
+    
 
     switch (iMessage) {
     case WM_CREATE:
-
+        SetTimer(hWnd, 1, 1, NULL);
     case WM_SIZE:
-        GetClientRect(hWnd, &rectView);
+        //GetClientRect(hWnd, &rectView);
         break;
     case WM_TIMER:
         
         InvalidateRect(hWnd, NULL, TRUE);
         break;
     case WM_KEYDOWN:
-       
+        /*switch (wParam) {
+        case 'W': case VK_UP: pc.pos.y -= 1; break;
+        case 'A': case VK_LEFT: pc.pos.x -= 1; break;
+        case 'S': case VK_DOWN: pc.pos.y += 1; break;
+        case 'D': case VK_RIGHT: pc.pos.x += 1; break;
+        }*/
+        pc.before_pos = pc.pos;
+        if(GetAsyncKeyState('W')|| GetAsyncKeyState(VK_UP)) pc.pos.y -= 1;
+        if(GetAsyncKeyState('A')|| GetAsyncKeyState(VK_LEFT))pc.pos.x -= 1;
+        if(GetAsyncKeyState('S')|| GetAsyncKeyState(VK_DOWN))pc.pos.y += 1;
+        if(GetAsyncKeyState('D')|| GetAsyncKeyState(VK_RIGHT))pc.pos.x += 1;
+        InvalidateRect(hWnd, NULL, TRUE);
         break;
     case WM_PAINT:
         hdc = BeginPaint(hWnd, &ps);
+        wsprintf(text, L"%d : %d    %d : %d", 
+            (int)pc.pos.x,  (int)pc.pos.y,(int)pc.before_pos.x, (int)pc.before_pos.y);
+        TextOut(hdc, 100, 100, text, lstrlen(text));
+
+        Ellipse(hdc, pc.pos.x - pc_size, pc.pos.y- pc_size, pc.pos.x + pc_size, pc.pos.y + pc_size);
 
         EndPaint(hWnd, &ps);
 
         return 0;
     case WM_DESTROY:
         PostQuitMessage(1);
-
+        KillTimer(hWnd,1);
         return 0;
     }
     return(DefWindowProc(hWnd, iMessage, wParam, lParam));
