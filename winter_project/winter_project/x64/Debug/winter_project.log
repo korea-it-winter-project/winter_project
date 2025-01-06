@@ -1,20 +1,32 @@
 ﻿  main.cpp
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(102,83): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(102,70): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(102,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(102,47): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(103,83): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(103,70): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(103,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(103,47): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(148,91): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(148,71): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(148,51): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(148,31): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(83,16): warning C4101: 'oB' :참조되지 않은 지역 변수입니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(83,12): warning C4101: 'hB' :참조되지 않은 지역 변수입니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(82,16): warning C4101: 'oldpen' :참조되지 않은 지역 변수입니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(82,10): warning C4101: 'Hpen' :참조되지 않은 지역 변수입니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(80,21): warning C4101: 'OldBrush' :참조되지 않은 지역 변수입니다.
-E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(80,12): warning C4101: 'MyBrush' :참조되지 않은 지역 변수입니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\player.h(21,65): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\player.h(21,52): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\player.h(21,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\player.h(21,32): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\player.h(22,65): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\player.h(22,52): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\player.h(22,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\player.h(22,32): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(73,16): warning C4101: 'oB' :참조되지 않은 지역 변수입니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(73,12): warning C4101: 'hB' :참조되지 않은 지역 변수입니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(72,16): warning C4101: 'oldpen' :참조되지 않은 지역 변수입니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(72,10): warning C4101: 'Hpen' :참조되지 않은 지역 변수입니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(70,21): warning C4101: 'OldBrush' :참조되지 않은 지역 변수입니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\main.cpp(70,12): warning C4101: 'MyBrush' :참조되지 않은 지역 변수입니다.
   winter_project.vcxproj -> E:\CPP\git_clone\winter_project\winter_project\x64\Debug\winter_project.exe

@@ -58,16 +58,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 #define re 15
 #define swap(x,y) temp = x; x=y;y=temp;
 
-
-double lengthpts(int x1, int y1, int x2, int y2) {
-    return(sqrt((float)((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))));
-}
-//bool inCircle(int x, int y, int mx, int my) {
-//    if (lengthpts(x, y, mx, my) <= Bsize) return true;
-//    return false;
-//}
-
-
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 {
     //Ellipse(hdc, x, y, x + 20, y + 20); 원그리기
@@ -96,11 +86,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
         GetClientRect(hWnd, &rectView);
         break;
     case WM_TIMER:
-        pc.dir.x = pc.pos.x - mouse_pos.x;
-        pc.dir.y = pc.pos.y - mouse_pos.y;
-
-        pc.dir.x = pc.dir.x / lengthpts(pc.pos.x, pc.pos.y, mouse_pos.x, mouse_pos.y);
-        pc.dir.y = pc.dir.y / lengthpts(pc.pos.x, pc.pos.y, mouse_pos.x, mouse_pos.y);
+        pc.update_dir(mouse_pos);
         InvalidateRect(hWnd, NULL, true);
         break;
     case WM_LBUTTONDOWN:
@@ -117,17 +103,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
         mouse_truck = false;
         break;
     case WM_KEYDOWN:
-        /*switch (wParam) {
-        case 'W': case VK_UP: pc.pos.y -= 1; break;
-        case 'A': case VK_LEFT: pc.pos.x -= 1; break;
-        case 'S': case VK_DOWN: pc.pos.y += 1; break;
-        case 'D': case VK_RIGHT: pc.pos.x += 1; break;
-        }*/
+
         pc.before_pos = pc.pos;
-        /*if(GetAsyncKeyState('W')|| GetAsyncKeyState(VK_UP)) pc.pos.y -= 1;
-        if(GetAsyncKeyState('A')|| GetAsyncKeyState(VK_LEFT))pc.pos.x -= 1;
-        if(GetAsyncKeyState('S')|| GetAsyncKeyState(VK_DOWN))pc.pos.y += 1;
-        if(GetAsyncKeyState('D')|| GetAsyncKeyState(VK_RIGHT))pc.pos.x += 1;*/
         pc.move();
         InvalidateRect(hWnd, NULL,true);
         break;
@@ -145,7 +122,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
             (int)pc.dir.x, (int)(pc.dir.x * 100) % 100,
             (int)pc.dir.y, (int)(pc.dir.y * 100) % 100);
         TextOut(hdc, 100, 100, text, lstrlen(text));
-        Ellipse(hdc, pc.pos.x - pc_size, pc.pos.y - pc_size, pc.pos.x + pc_size, pc.pos.y + pc_size);
+        Ellipse(hdc, (int)pc.pos.x - (int)pc_size, (int)pc.pos.y - (int)pc_size, (int)pc.pos.x + (int)pc_size, (int)pc.pos.y + pc_size);
         Ellipse(hdc, (int)mouse_pos.x - 5, (int)mouse_pos.y - 5, (int)mouse_pos.x + 5, (int)mouse_pos.y + 5);
         //BitBlt(hdc, 0, 0, 800, 500, bufferDC, 0, 0, SRCCOPY);
 
