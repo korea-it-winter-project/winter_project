@@ -124,10 +124,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
         case 'D': case VK_RIGHT: pc.pos.x += 1; break;
         }*/
         pc.before_pos = pc.pos;
-        if(GetAsyncKeyState('W')|| GetAsyncKeyState(VK_UP)) pc.pos.y -= 1;
+        /*if(GetAsyncKeyState('W')|| GetAsyncKeyState(VK_UP)) pc.pos.y -= 1;
         if(GetAsyncKeyState('A')|| GetAsyncKeyState(VK_LEFT))pc.pos.x -= 1;
         if(GetAsyncKeyState('S')|| GetAsyncKeyState(VK_DOWN))pc.pos.y += 1;
-        if(GetAsyncKeyState('D')|| GetAsyncKeyState(VK_RIGHT))pc.pos.x += 1;
+        if(GetAsyncKeyState('D')|| GetAsyncKeyState(VK_RIGHT))pc.pos.x += 1;*/
+        pc.move();
         InvalidateRect(hWnd, NULL,true);
         break;
     case WM_PAINT:
@@ -136,25 +137,22 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
         bufferDC2 = CreateCompatibleDC(bufferDC);
         if (hBit1 == NULL)
             hBit1 = CreateCompatibleBitmap(hdc, 800, 500);
-        oldBit1 = (HBITMAP)SelectObject(bufferDC, hBit1);
-        oldBit2 = (HBITMAP)SelectObject(bufferDC2, hBit2);
+        
 
-        BitBlt(bufferDC, 0, 0, 800, 500, bufferDC2, 0, 0, SRCCOPY);
-
-        		//투명한 배경색 사용 SetBackGroundMode
-        wsprintf(text, L"%d : %d  %d : %d   %d.%d : %d.%d",
+        
+        wsprintf(text, L"%4d : %4d  %4d : %4d   %d.%2d : %d.%2d",
             (int)pc.pos.x, (int)pc.pos.y, (int)mouse_pos.x, (int)mouse_pos.y,
             (int)pc.dir.x, (int)(pc.dir.x * 100) % 100,
             (int)pc.dir.y, (int)(pc.dir.y * 100) % 100);
-        TextOut(bufferDC, 100, 100, text, lstrlen(text));
-        Ellipse(bufferDC, pc.pos.x - pc_size, pc.pos.y - pc_size, pc.pos.x + pc_size, pc.pos.y + pc_size);
-        Ellipse(bufferDC, (int)mouse_pos.x - 5, (int)mouse_pos.y - 5, (int)mouse_pos.x + 5, (int)mouse_pos.y + 5);
-        BitBlt(hdc, 0, 0, 800, 500, bufferDC, 0, 0, SRCCOPY);
+        TextOut(hdc, 100, 100, text, lstrlen(text));
+        Ellipse(hdc, pc.pos.x - pc_size, pc.pos.y - pc_size, pc.pos.x + pc_size, pc.pos.y + pc_size);
+        Ellipse(hdc, (int)mouse_pos.x - 5, (int)mouse_pos.y - 5, (int)mouse_pos.x + 5, (int)mouse_pos.y + 5);
+        //BitBlt(hdc, 0, 0, 800, 500, bufferDC, 0, 0, SRCCOPY);
 
-        SelectObject(bufferDC, oldBit1);
+       /* SelectObject(bufferDC, oldBit1);
         SelectObject(bufferDC2, oldBit2);
         DeleteDC(bufferDC);
-        DeleteDC(bufferDC2);
+        DeleteDC(bufferDC2);*/
         //EndPaint(hwnd, &ps);
 
         EndPaint(hWnd, &ps);
