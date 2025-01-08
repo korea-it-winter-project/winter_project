@@ -16,40 +16,67 @@
     <Filter Include="Resource">
       <UniqueIdentifier>{a6d4da09-3aa5-4ff3-81e4-beb9f0eeeca9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\01.Hader">
+      <UniqueIdentifier>{b9276265-a554-4088-be74-fef1b2163e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\00.main">
+      <UniqueIdentifier>{598857e1-2043-4066-a6d6-3da3510596b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.src">
+      <UniqueIdentifier>{1d10743a-b4b4-472b-bdbf-72ebeab27714}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="object.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Game.h">
+      <Filter>소스 파일\01.Hader</Filter>
     </ClInclude>
-    <ClInclude Include="player.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="pch.h">
+      <Filter>소스 파일\01.Hader</Filter>
     </ClInclude>
-    <ClInclude Include="system.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="InputManager.h">
+      <Filter>소스 파일\01.Hader</Filter>
     </ClInclude>
-    <ClInclude Include="vector2.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="init.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="TimeManager.h">
+      <Filter>소스 파일\01.Hader</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp">
+      <Filter>소스 파일\02.src</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>소스 파일\02.src</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일\02.src</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>소스 파일\02.src</Filter>
+    </ClCompile>
+    <ClCompile Include="main_game.cpp">
+      <Filter>소스 파일\00.main</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\00.main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="winter_project.rc">
-      <Filter>리소스 파일</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="bitmap1.bmp">
+    <Image Include="small.ico">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="WindowsProject2.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WindowsProject2.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
