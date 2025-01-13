@@ -1,5 +1,6 @@
 #pragma once
 #include "pch.h"
+#include "SceneManager.h"
 
 #define DECLARE_SINGLE(classname)		\
 private:								\
@@ -14,8 +15,12 @@ return &s_instance;						\
 
 class Game {
 public:
-	/*Game();
-	~Game();*/
+	Game() {
+		int* p = new int();
+	}
+	~Game() {
+		GET_SINGLE(SceneManager)->clear();
+	}
 public:
 	void Init(HWND hwnd);
 	void Update();

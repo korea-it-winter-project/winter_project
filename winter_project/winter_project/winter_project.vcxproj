@@ -106,7 +106,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -121,33 +121,42 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DevScene.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="main_game.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="TimeManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DevScene.h" />
+    <ClInclude Include="Fpoint.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameScene.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="sceneManager.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TimeManager.h" />
   </ItemGroup>
@@ -157,6 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsProject2.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sceneManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

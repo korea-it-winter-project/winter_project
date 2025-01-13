@@ -1,16 +1,7 @@
 #pragma once
 #include "pch.h"
 
-#define DECLARE_SINGLE(classname)		\
-private:								\
-	classname() { }						\
-public:									\
-	static classname* GetInstance()		\
-{										\
-static classname s_instance;			\
-return &s_instance;						\
-}
-#define GET_SINGLE(classname) classname::GetInstance()
+
 
 
 
@@ -45,7 +36,7 @@ enum {
 class InputManager {
 	DECLARE_SINGLE(InputManager);
 public:
-	void init(HWND hwnd);
+	void Init(HWND hwnd);
 	void Update();
 	bool GetButton(keytype key) { return GetState(key) == KeyState::Press; }
 	bool GetButtonDwon(keytype key) { return GetState(key) == KeyState::Down; }

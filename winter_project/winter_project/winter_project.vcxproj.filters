@@ -16,28 +16,34 @@
     <Filter Include="Resource">
       <UniqueIdentifier>{a6d4da09-3aa5-4ff3-81e4-beb9f0eeeca9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\01.Hader">
-      <UniqueIdentifier>{b9276265-a554-4088-be74-fef1b2163e90}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\00.main">
       <UniqueIdentifier>{598857e1-2043-4066-a6d6-3da3510596b9}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\02.src">
       <UniqueIdentifier>{1d10743a-b4b4-472b-bdbf-72ebeab27714}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\99.Hader">
+      <UniqueIdentifier>{b9276265-a554-4088-be74-fef1b2163e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.manager">
+      <UniqueIdentifier>{122f5d27-b1c5-482e-882e-dc8956f22f70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.manager\cpp">
+      <UniqueIdentifier>{8cc45d5a-9113-4305-83a9-2c0ec6a0ae95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.manager\hader">
+      <UniqueIdentifier>{b8ab6534-81f3-49b0-a638-4ff3a050c275}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.scene">
+      <UniqueIdentifier>{87d250ba-4b8a-457b-8ccf-dafb11d26dfa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
-      <Filter>소스 파일\01.Hader</Filter>
+      <Filter>소스 파일\99.Hader</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
-      <Filter>소스 파일\01.Hader</Filter>
-    </ClInclude>
-    <ClInclude Include="InputManager.h">
-      <Filter>소스 파일\01.Hader</Filter>
-    </ClInclude>
-    <ClInclude Include="TimeManager.h">
-      <Filter>소스 파일\01.Hader</Filter>
+      <Filter>소스 파일\99.Hader</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>헤더 파일</Filter>
@@ -45,25 +51,58 @@
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>소스 파일\99.Hader</Filter>
+    </ClInclude>
+    <ClInclude Include="Fpoint.h">
+      <Filter>소스 파일\99.Hader</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneManager.h">
+      <Filter>소스 파일\03.manager\hader</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>소스 파일\03.manager\hader</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>소스 파일\03.manager\hader</Filter>
+    </ClInclude>
+    <ClInclude Include="DevScene.h">
+      <Filter>소스 파일\04.scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>소스 파일\04.scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>소스 파일\04.scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp">
-      <Filter>소스 파일\02.src</Filter>
-    </ClCompile>
-    <ClCompile Include="InputManager.cpp">
-      <Filter>소스 파일\02.src</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>소스 파일\02.src</Filter>
     </ClCompile>
-    <ClCompile Include="TimeManager.cpp">
-      <Filter>소스 파일\02.src</Filter>
-    </ClCompile>
-    <ClCompile Include="main_game.cpp">
-      <Filter>소스 파일\00.main</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일\00.main</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일\02.src</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>소스 파일\03.manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>소스 파일\03.manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="DevScene.cpp">
+      <Filter>소스 파일\04.scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>소스 파일\04.scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>소스 파일\04.scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>소스 파일\02.src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -78,5 +117,10 @@
     <ResourceCompile Include="WindowsProject2.rc">
       <Filter>리소스 파일</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sceneManager.cpp">
+      <Filter>소스 파일\03.manager\cpp</Filter>
+    </None>
   </ItemGroup>
 </Project>
