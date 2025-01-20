@@ -1,30 +1,26 @@
+#include "sceneManager.h"
 #include "DevScene.h"
 #include "GameScene.h"
-#include "SceneManager.h"
-
 
 // 초기화
-inline void SceneManager::Init(sceneType sc_type) {
+void SceneManager::Init(sceneType sc_type) {
     _scene = nullptr;
     _sceneType = sc_type;
 }
 
-// 업데이트
-inline void SceneManager::UPdate() {
+void SceneManager::Update() {  // 여기서도 함수 이름 확인
     if (_scene) {
-        _scene->UPdate();
+        _scene->Update();
     }
 }
 
-// 렌더링
-inline void SceneManager::Render(HDC hdc) {
+void SceneManager::Render(HDC hdc) {
     if (_scene) {
         _scene->Render(hdc);
     }
 }
 
-// 씬 변경
-inline void SceneManager::ChScene(sceneType sc_type) {
+void SceneManager::ChScene(sceneType sc_type) {
     if (_sceneType == sc_type) return;
 
     Scene* newScene = nullptr;
@@ -47,10 +43,10 @@ inline void SceneManager::ChScene(sceneType sc_type) {
     }
 }
 
-// 씬 초기화
-inline void SceneManager::clear() {
+void SceneManager::clear() {
     if (_scene) {
         delete _scene;
         _scene = nullptr;
     }
 }
+

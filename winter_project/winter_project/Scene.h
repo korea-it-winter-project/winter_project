@@ -8,6 +8,6 @@ public:
 
 	virtual void Init()abstract;
 	virtual void Render(HDC hdc)abstract;
-	virtual void UPdate()abstract;
+	virtual void Update()abstract;
 };
 

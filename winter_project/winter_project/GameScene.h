@@ -7,6 +7,6 @@ public :
 	//virtual ~GameScene();
 
 	virtual void Init()override;
-	virtual void UPdate()override;
+	virtual void Update()override;
 	virtual void Render(HDC hdc)override;
 };

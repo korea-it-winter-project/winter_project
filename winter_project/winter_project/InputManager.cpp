@@ -1,6 +1,5 @@
-
 #include "pch.h"
-//#include "InputManager.h"
+#include "InputManager.h"
 
 void InputManager::Init(HWND hwnd)
 {

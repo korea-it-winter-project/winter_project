@@ -7,6 +7,6 @@ public:
     //~DevScene() = default; // 기본 소멸자
 
     void Init() override;
-    void UPdate() override;
+    void Update() override;
     void Render(HDC hdc) override;
 };

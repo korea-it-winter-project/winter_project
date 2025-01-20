@@ -1,4 +1,7 @@
 #include "pch.h"
+#include "Game.h" // Game 클래스 추가
+#include "InputManager.h"
+#include "TimeManager.h"
 
 HINSTANCE hInst;
 HWND g_hwnd;
@@ -28,10 +31,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
         return FALSE;
     }
 
+    // 3. 게임 객체 생성 및 초기화
     Game game;
     game.Init(g_hwnd);
 
-    // 3. 메시지 루프 실행
+    // 4. 메시지 루프 실행
     while (msg.message != WM_QUIT) {
         if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
             TranslateMessage(&msg);
@@ -103,7 +107,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
         PAINTSTRUCT ps;
         HDC hdc;
         hdc = BeginPaint(hWnd, &ps);
-        //TextOut(hdc, 50, 50, L"Hello, Game Window!", 20); // 예제 텍스트
         EndPaint(hWnd, &ps);
         return 0;
 

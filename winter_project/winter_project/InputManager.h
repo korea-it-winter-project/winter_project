@@ -1,10 +1,6 @@
 #pragma once
 #include "pch.h"
 
-
-
-
-
 enum class keytype {
 	L_mouse = VK_LBUTTON,
 	R_mouse = VK_RBUTTON,

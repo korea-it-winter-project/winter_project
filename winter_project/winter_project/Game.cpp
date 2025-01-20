@@ -1,50 +1,50 @@
 #include "pch.h"
+
+#include "Game.h"
 #include "SceneManager.h"
+#include "InputManager.h"
+#include "TimeManager.h"
 
-
-static UINT32 fps;
-static float deltaTime;
-static POINT m_pos;
-
-inline void Game::Init(HWND hwnd)
-{
-	_hwnd = hwnd;
-	_hdc = ::GetDC(hwnd);
-	GET_SINGLE(TimeManager)->Init();
-	GET_SINGLE(InputManager)->Init(hwnd);
-	GET_SINGLE(SceneManager)->Init(sceneType::DevScene);
-
-	GET_SINGLE(SceneManager)->ChScene(sceneType::DevScene);
+Game::Game() {
+    // 생성자 구현
+    int* p = new int();
 }
 
-inline void Game::Update()
-{
-	GET_SINGLE(TimeManager)->Update();
-	GET_SINGLE(InputManager)->Update();
-	GET_SINGLE(SceneManager)->UPdate();
+Game::~Game() {
 
-	fps = GET_SINGLE(TimeManager)->GetFps();
-	deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
-	m_pos = GET_SINGLE(InputManager)->GetMousePos();
-	//if (GET_SINGLE(InputManager)->GetButton(keytype::UP)) {
-	//	pc.move(0,0.1f);
-	//}
 }
 
-inline void Game::Render() {
+void Game::Init(HWND hwnd) {
+    _hwnd = hwnd;
+    _hdc = ::GetDC(hwnd);
+    ::GetClientRect(hwnd, &_rect);
+    _hdcBack = ::CreateCompatibleDC(_hdc);
+    _tempBack = ::CreateCompatibleBitmap(_hdc, _rect.right, _rect.bottom);
+    HBITMAP prev = (HBITMAP)::SelectObject(_hdcBack, _tempBack);
+    ::DeleteObject(prev);
 
-	WCHAR str[1024];
-	//WCHAR pc_pos[100];
-	wsprintfW(str, L"mouse pos : [%04d, %04d]",
-		m_pos.x, m_pos.y, fps, deltaTime);
-	/*wsprintfW(pc_pos, L"pc pos : [%04d.%03d : %04d.%03d]",
-		(int)pc.pos.x, (int)(pc.pos.x * 100) % 100, (int)pc.pos.y, (int)(pc.pos.y * 100) % 100);*/
-	::TextOut(_hdc, 20, 10, str, lstrlen(str));
-	//::TextOut(_hdc, 20, 40, pc_pos, lstrlen(pc_pos));
+    GET_SINGLE(TimeManager)->Init();
+    GET_SINGLE(InputManager)->Init(hwnd);
 
-	//Rectangle(_hdc, pc.pos.x - 25, pc.pos.y - 25, pc.pos.x + 25, pc.pos.y+25);
+}
 
+void Game::Update() {
+    GET_SINGLE(TimeManager)->Update();
+    GET_SINGLE(InputManager)->Update();
 
-	GET_SINGLE(SceneManager)->Render(_hdc);
+    
+}
 
+void Game::Render() {
+    UINT32 fps = GET_SINGLE(TimeManager)->GetFps();
+    float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
+    POINT m_pos = GET_SINGLE(InputManager)->GetMousePos();
+    WCHAR str[1024];
+    wsprintfW(str, L"mouse pos : [%04d, %04d]", m_pos.x, m_pos.y);
+    ::TextOut(_hdcBack, 20, 10, str, lstrlen(str));
+
+    Rectangle(_hdcBack, m_pos.x - 25, m_pos.y - 25, m_pos.x + 25, m_pos.y + 25);
+
+    ::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack,0, 0, SRCCOPY);
+    ::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS);
 }

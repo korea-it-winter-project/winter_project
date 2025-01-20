@@ -1,5 +1,7 @@
 #include "pch.h"
 #include "DevScene.h"
+#include "InputManager.h"
+#include "TimeManager.h"
 
 FPOINT pos = { 300,300 };
 float _speed = 1000;
@@ -13,7 +15,7 @@ float _speed = 1000;
 void DevScene::Init() {
 
 }
-void DevScene::UPdate() {
+void DevScene::Update() {
 	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
 	if (GET_SINGLE(InputManager)->GetButton(keytype::A))
 		pos.x -= _speed * deltaTime;

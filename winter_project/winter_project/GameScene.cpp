@@ -14,6 +14,6 @@ void GameScene::Init() {
 void GameScene::Render(HDC hdc) {
 
 }
-void GameScene::UPdate() {
+void GameScene::Update() {
 
 }
