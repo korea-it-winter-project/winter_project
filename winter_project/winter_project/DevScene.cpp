@@ -6,14 +6,15 @@
 FPOINT pos = { 300,300 };
 float _speed = 1000;
 
-//DevScene::DevScene() {
-//
-//}
-//DevScene::~DevScene() {
-//
-//}
-void DevScene::Init() {
+DevScene::DevScene() {
 
+}
+DevScene::~DevScene() {
+
+}
+void DevScene::Init() {
+	/*_player = new Player();
+	_player->Init*()*/
 }
 void DevScene::Update() {
 	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();

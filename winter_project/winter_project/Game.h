@@ -21,4 +21,6 @@ private:
 	RECT _rect;
 	HDC _hdcBack = {};
 	HBITMAP _tempBack = {};
+
+	class Player *_player;
 };

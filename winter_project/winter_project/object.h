@@ -4,9 +4,13 @@
 
 struct Stat {
 	UINT32 Hp = 0;
-	UINT32 MaxHP = 0;
+	UINT32 MaxHP = 0; //음수로 못넘어 가게 부호 없는 정수로 지정
 	float speed;
-	UINT damage=0;
+	UINT32 damage=0; 
+	/*
+	간혹 게임중 공격도중 음수 값이 나와 딜이아니라
+	적을 힐을 하는 경우가 있음 이를 막기 위해 부호 없는 정수로 지정
+	*/
 };
 
 
@@ -23,7 +27,7 @@ public:
 	Object(ObjectType objType);
 	virtual ~Object();
 
-	virtual void init() abstract;
+	virtual void Init() abstract;
 	virtual void Update() abstract;
 	virtual void Render(HDC hdc) abstract;
 

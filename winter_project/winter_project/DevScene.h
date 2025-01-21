@@ -3,10 +3,12 @@
 
 class DevScene : public Scene {
 public:
-    //DevScene() = default; // 기본 생성자
-    //~DevScene() = default; // 기본 소멸자
+    DevScene(); // 기본 생성자
+    virtual ~DevScene() override; // 기본 소멸자
 
-    void Init() override;
-    void Update() override;
-    void Render(HDC hdc) override;
+    virtual void Init() override;
+    virtual void Update() override;
+    virtual void Render(HDC hdc) override;
+private:
+    class Player* _player = nullptr;
 };

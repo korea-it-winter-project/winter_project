@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "Game.h"
+//#include "Game.h"
 #include "SceneManager.h"
 #include "InputManager.h"
 #include "TimeManager.h"
@@ -26,13 +26,19 @@ void Game::Init(HWND hwnd) {
     GET_SINGLE(TimeManager)->Init();
     GET_SINGLE(InputManager)->Init(hwnd);
 
+    //_player = new Player();
+
+    GET_SINGLE(SceneManager)->Init();
+    GET_SINGLE(SceneManager)->ChScene(sceneType::DevScene);
 }
 
 void Game::Update() {
     GET_SINGLE(TimeManager)->Update();
     GET_SINGLE(InputManager)->Update();
+    GET_SINGLE(SceneManager)->Update();
+    //float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
 
-    
+
 }
 
 void Game::Render() {
@@ -47,4 +53,6 @@ void Game::Render() {
 
     ::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack,0, 0, SRCCOPY);
     ::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS);
+
+    GET_SINGLE(SceneManager)->Render(_hdc);
 }
