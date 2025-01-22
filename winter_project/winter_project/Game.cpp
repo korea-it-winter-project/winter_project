@@ -4,6 +4,7 @@
 #include "SceneManager.h"
 #include "InputManager.h"
 #include "TimeManager.h"
+#include "UiManager.h"
 
 Game::Game() {
     // 생성자 구현
@@ -25,7 +26,7 @@ void Game::Init(HWND hwnd) {
 
     GET_SINGLE(TimeManager)->Init();
     GET_SINGLE(InputManager)->Init(hwnd);
-
+    GET_SINGLE(UiManager)->init();
     //_player = new Player();
 
     GET_SINGLE(SceneManager)->Init();
@@ -35,6 +36,7 @@ void Game::Init(HWND hwnd) {
 void Game::Update() {
     GET_SINGLE(TimeManager)->Update();
     GET_SINGLE(InputManager)->Update();
+    GET_SINGLE(UiManager)->Update();
     GET_SINGLE(SceneManager)->Update();
     //float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
 
@@ -53,6 +55,6 @@ void Game::Render() {
 
     ::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack,0, 0, SRCCOPY);
     ::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS);
-
+    GET_SINGLE(UiManager)->Render(_hdc);
     GET_SINGLE(SceneManager)->Render(_hdc);
 }

@@ -25,7 +25,7 @@ enum class ObjectType {
 class Object {
 public:
 	Object(ObjectType objType);
-	virtual ~Object();
+	~Object();
 
 	virtual void Init() abstract;
 	virtual void Update() abstract;
@@ -38,6 +38,6 @@ public :
 protected:
 	ObjectType _type = ObjectType::None;
 	Stat _stat = {};
-	FPOINT _pos;
+	FPOINT _pos = {};
 
 };

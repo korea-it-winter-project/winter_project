@@ -2,6 +2,12 @@
 #include "Player.h"
 //#include "object.h"
 
+//Player::Player():Object(ObjectType::Player) {
+//	
+//}
+//Player::~Player() {
+//
+//}
 void Player::Init() {
 	_stat.Hp = 100;
 	_stat.MaxHP = 100;
@@ -11,5 +17,8 @@ void Player::Init() {
 	_pos.y = 500;
 };
 void Player::Update() {
+
+};
+void Player::Render(HDC hdc) {
 
 }

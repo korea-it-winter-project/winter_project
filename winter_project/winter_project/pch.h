@@ -42,8 +42,8 @@ public:                                   \
 #include "TimeManager.h"
 #include "Scene.h"
 #include "Fpoint.h"
-//#include "Player.h"
-//#include "object.h"
+#include "Player.h"
+#include "object.h"
 
 
 // 디버깅 관련 설정 (디버그 빌드에서 메모리 할당 추적)
