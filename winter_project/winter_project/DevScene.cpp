@@ -14,8 +14,8 @@ DevScene::~DevScene() {
 
 }
 void DevScene::Init() {
-	//_player = new Player();
-	//_player->Init ();
+	_player = new Player();
+	_player->Init ();
 }
 void DevScene::Update() {
 	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();

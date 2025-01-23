@@ -3,12 +3,22 @@
 
 class Player : public Object {
 public :
-	Player();
-	virtual ~Player() ;
+	Player() : Object(ObjectType::Player) {
 
-	virtual void Init() override;
-	virtual void Update() override;
-	virtual void Render(HDC hdc) override;
+	};
+	virtual ~Player() {
+
+	};
+
+	virtual void Init() override {
+
+	};
+	virtual void Update() override {
+
+	};
+	virtual void Render(HDC hdc) override {
+
+	};
 
 public:
 

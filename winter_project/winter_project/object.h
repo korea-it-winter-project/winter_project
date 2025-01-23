@@ -24,12 +24,12 @@ enum class ObjectType {
 
 class Object {
 public:
-	Object(ObjectType objType);
-	~Object();
+	Object(ObjectType objType) {};
+	~Object() {};
 
-	virtual void Init() abstract;
-	virtual void Update() abstract;
-	virtual void Render(HDC hdc) abstract;
+	virtual void Init() abstract {};
+	virtual void Update() abstract {};
+	virtual void Render(HDC hdc) abstract {};
 
 public :
 	ObjectType GetObjectType() { return _type; }
