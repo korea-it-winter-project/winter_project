@@ -37,6 +37,9 @@
     <Filter Include="소스 파일\04.scene">
       <UniqueIdentifier>{87d250ba-4b8a-457b-8ccf-dafb11d26dfa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\05.object">
+      <UniqueIdentifier>{2bd2107d-d6bc-4ee1-823d-45c96e6f9d86}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -50,9 +53,6 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>소스 파일\99.Hader</Filter>
     </ClInclude>
     <ClInclude Include="Fpoint.h">
       <Filter>소스 파일\99.Hader</Filter>
@@ -74,6 +74,12 @@
     </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>소스 파일\04.scene</Filter>
+    </ClInclude>
+    <ClInclude Include="object.h">
+      <Filter>소스 파일\05.object</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>소스 파일\05.object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

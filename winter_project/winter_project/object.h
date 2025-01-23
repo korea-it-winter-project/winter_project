@@ -28,7 +28,11 @@ public:
 	~Object() {};
 
 	virtual void Init() abstract {};
-	virtual void Update() abstract {};
+	virtual void Update() abstract {
+		if (test) {
+
+		}
+	};
 	virtual void Render(HDC hdc) abstract {};
 
 public :
@@ -39,5 +43,5 @@ protected:
 	ObjectType _type = ObjectType::None;
 	Stat _stat = {};
 	FPOINT _pos = {};
-
+	bool test;
 };
