@@ -9,10 +9,21 @@
 Game::Game() {
     // 생성자 구현
     int* p = new int();
+    GET_SINGLE(SceneManager)->ChScene(sceneType::GameScene);
+
 }
 
 Game::~Game() {
 
+}
+
+void Game::SceneSzieCH(HWND hwnd) {
+    _hwnd = hwnd;
+    ::GetClientRect(hwnd, &_rect);
+    _hdcBack = ::CreateCompatibleDC(_hdc);
+    _tempBack = ::CreateCompatibleBitmap(_hdc, _rect.right, _rect.bottom);
+    HBITMAP prev = (HBITMAP)::SelectObject(_hdcBack, _tempBack);
+    ::DeleteObject(prev);
 }
 
 void Game::Init(HWND hwnd) {
@@ -30,10 +41,11 @@ void Game::Init(HWND hwnd) {
     //_player = new Player();
 
     GET_SINGLE(SceneManager)->Init();
-    GET_SINGLE(SceneManager)->ChScene(sceneType::DevScene);
 }
 
 void Game::Update() {
+        GetClientRect(_hwnd,&_rect);
+        //InvalidateRect(_hwnd, NULL, );
     GET_SINGLE(TimeManager)->Update();
     GET_SINGLE(InputManager)->Update();
     GET_SINGLE(UiManager)->Update();
@@ -51,10 +63,11 @@ void Game::Render() {
     wsprintfW(str, L"mouse pos : [%04d, %04d]", m_pos.x, m_pos.y);
     ::TextOut(_hdcBack, 20, 10, str, lstrlen(str));
 
-    Rectangle(_hdcBack, m_pos.x - 25, m_pos.y - 25, m_pos.x + 25, m_pos.y + 25);
+    //Rectangle(_hdcBack, m_pos.x - 25, m_pos.y - 25, m_pos.x + 25, m_pos.y + 25);
+    GET_SINGLE(UiManager)->Render(_hdcBack);
+    GET_SINGLE(SceneManager)->Render(_hdcBack);
 
     ::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack,0, 0, SRCCOPY);
     ::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS);
-    GET_SINGLE(UiManager)->Render(_hdc);
-    GET_SINGLE(SceneManager)->Render(_hdc);
+    
 }

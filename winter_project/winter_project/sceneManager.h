@@ -3,11 +3,13 @@
 //#include "Scene.h"
 #include "DevScene.h"
 #include "GameScene.h"
+#include "Leveleditor.h"
 
 
 enum class sceneType {
     DevScene,
     GameScene,
+    Leveleditor,
     none
 };
 
@@ -44,7 +46,11 @@ public :
         case sceneType::GameScene:
             newScene = new GameScene();
             break;
+        case sceneType::Leveleditor:
+            newScene = new Leveleditor();
+            break;
         }
+        
 
         if (_scene) {
             delete _scene;
@@ -54,7 +60,7 @@ public :
         _scene = newScene;
         _sceneType = sc_type;
 
-        newScene->Init();
+        newScene->Init(nullptr);
     };  // ¼±¾ð
 };
 

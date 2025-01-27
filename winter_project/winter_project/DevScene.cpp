@@ -3,6 +3,7 @@
 #include "DevScene.h"
 #include "InputManager.h"
 #include "TimeManager.h"
+#include "ObjectManager.h"
 
 FPOINT pos = { 300,300 };
 float _speed = 1000;
@@ -13,7 +14,7 @@ DevScene::DevScene() {
 DevScene::~DevScene() {
 
 }
-void DevScene::Init() {
+void DevScene::Init(HWND hwnd) {
 	_player = new Player();
 	_player->Init ();
 }

@@ -8,7 +8,7 @@ GameScene::GameScene() {
 GameScene::~GameScene() {
 
 }
-void GameScene::Init() {
+void GameScene::Init(HWND hwnd) {
 
 }
 void GameScene::Render(HDC hdc) {

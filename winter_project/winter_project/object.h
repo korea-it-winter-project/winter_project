@@ -3,7 +3,7 @@
 #include "pch.h"
 
 struct Stat {
-	UINT32 Hp = 0;
+	INT32 Hp = 0;
 	UINT32 MaxHP = 0; //음수로 못넘어 가게 부호 없는 정수로 지정
 	float speed;
 	UINT32 damage=0; 

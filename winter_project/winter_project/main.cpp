@@ -6,11 +6,14 @@
 HINSTANCE hInst;
 HWND g_hwnd;
 
+Game game;
+
+
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 ATOM MyRegisterClass(HINSTANCE hInstance);
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow);
 HINSTANCE g_hInst;
-LPCTSTR lpszClass = TEXT("박성원_24311032");
+LPCTSTR lpszClass = TEXT("모질이들");
 
 #define t_print(x, y, text, number) TextOut(hdc, x, y, text, number)
 #define m_box(title, text) MessageBox(hWnd, text, title, MB_OK)
@@ -32,7 +35,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     }
 
     // 3. 게임 객체 생성 및 초기화
-    Game game;
     game.Init(g_hwnd);
 
     // 4. 메시지 루프 실행
@@ -49,7 +51,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
     }
 
     return (int)msg.wParam;
-}
+} 
 
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow) {
     hInst = hInstance;
@@ -66,7 +68,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow) {
         winRect.bottom - winRect.top,
         nullptr, nullptr, hInstance, nullptr
     );
-
+       
     g_hwnd = hWnd;
 
     if (!hWnd) {
@@ -100,20 +102,16 @@ ATOM MyRegisterClass(HINSTANCE hInstance) {
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam) {
     switch (iMessage) {
-    case WM_CREATE:
-        return 0;
+        case                                                                      
 
-    case WM_PAINT:
-        PAINTSTRUCT ps;
-        HDC hdc;
-        hdc = BeginPaint(hWnd, &ps);
-        EndPaint(hWnd, &ps);
+    case WM_SIZE:
+        game.SceneSzieCH(g_hwnd);
+                 
+        InvalidateRect(hWnd, NULL, false);
         return 0;
-
     case WM_DESTROY:
         PostQuitMessage(0);
         return 0;
-
     default:
         return DefWindowProc(hWnd, iMessage, wParam, lParam);
     }

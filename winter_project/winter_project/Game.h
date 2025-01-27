@@ -13,6 +13,7 @@ public:
 	void Init(HWND hwnd);
 	void Update();
 	void Render();
+	void SceneSzieCH(HWND hwnd);
 private:
 	HWND _hwnd = {};
 	HDC _hdc = {};
