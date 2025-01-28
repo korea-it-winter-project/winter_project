@@ -21,7 +21,9 @@ private:
 	/////////double buffer
 	RECT _rect;
 	HDC _hdcBack = {};
+	HDC _hdcText = {};
 	HBITMAP _tempBack = {};
 
 	class Player *_player;
+	Camera camera;
 };

@@ -62,5 +62,13 @@ public :
 
         newScene->Init(nullptr);
     };  // 선언
+    void RenderWithCamera(HDC hdc, const Camera& camera) {
+        // 모든 게임 오브젝트를 순회하면서, WorldToScreen으로 변환하여 그리기
+        //for (auto& object : gameObjects) {
+        //    Vector screenPos = camera.WorldToScreen(object.GetPosition());
+        //    // 화면 좌표(screenPos)를 이용해 오브젝트를 그리기
+        //    object.Render(hdc, screenPos);
+        //}
+    };
 };
 

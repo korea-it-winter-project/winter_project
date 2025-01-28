@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "Scene.h"
 #include "InputManager.h"
+#include "Camera.h"
 #include <string>
 #include <fstream>
 
@@ -193,4 +194,6 @@ private:
     // FHD 기준 1920×1080을 가득 채울 수 있는 크기
     int mapData[ MAP_ROWS ][ MAP_COLS ]; // 맵 정보
     int selectedTile;                // 현재 선택된 타일 종류
+    //Camera camera; // 화면 크기: 800x600
+
 };

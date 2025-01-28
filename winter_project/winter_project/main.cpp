@@ -102,8 +102,6 @@ ATOM MyRegisterClass(HINSTANCE hInstance) {
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam) {
     switch (iMessage) {
-        case                                                                      
-
     case WM_SIZE:
         game.SceneSzieCH(g_hwnd);
                  

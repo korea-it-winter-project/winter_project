@@ -1,14 +1,36 @@
 #pragma once
-#include "Component.h"
-class Actor;
+#pragma once
+#include "Vector.h"
 
-class CamearaCompont : public Component {
+class Camera {
+private:
+    Vector position;      // 카메라 위치
+    Vector viewportSize;  // 뷰포트 크기
 
 public:
-	CamearaCompont();
-	virtual ~CamearaCompont();
+    Camera() {};
+    Camera(float width, float height) { 
+        viewportSize.x = width;
+        viewportSize.y = height;
+        position = Vector(0, 0);
+    };
 
+    void Move(const Vector& _position) {
+        position += _position; // 카메라 이동
+    }
 
-	/*virtual void BdginPlay() override;
-	virtual*/
-}
+    void SetViewportSize(float width, float height) {
+        viewportSize.x = width;
+        viewportSize.y = height;
+    }
+
+    Vector GetPosition() const { return position; }
+
+    // 월드 좌표 → 화면 좌표 변환
+    Vector WorldToScreen(const Vector& worldPos) const {
+        return Vector(
+            worldPos.x - position.x + viewportSize.x / 2.0f,
+            worldPos.y - position.y + viewportSize.y / 2.0f
+        );
+    }
+};

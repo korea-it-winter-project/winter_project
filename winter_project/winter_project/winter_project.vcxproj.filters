@@ -54,9 +54,6 @@
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Fpoint.h">
-      <Filter>소스 파일\99.Hader</Filter>
-    </ClInclude>
     <ClInclude Include="sceneManager.h">
       <Filter>소스 파일\03.manager\hader</Filter>
     </ClInclude>
@@ -98,6 +95,9 @@
     </ClInclude>
     <ClInclude Include="Leveleditor.h">
       <Filter>소스 파일\99.Hader</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>소스 파일\05.object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

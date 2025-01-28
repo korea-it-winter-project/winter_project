@@ -41,7 +41,6 @@ public:                                   \
 #include "InputManager.h"
 #include "TimeManager.h"
 #include "Scene.h"
-#include "Fpoint.h"
 #include "Player.h"
 #include "object.h"
 

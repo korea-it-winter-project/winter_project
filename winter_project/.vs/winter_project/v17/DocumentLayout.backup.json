@@ -1,0 +1,436 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\codeing\\gitClone\\winter_project\\winter_project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\DevScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\DevScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\ObjectManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\ObjectManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\sceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\sceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Leveleditor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\Leveleditor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\Vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Component.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\Component.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\DevScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\DevScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\TimeManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\TimeManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\InputManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\InputManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\InputManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\InputManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B785B49E-D5FC-4568-8715-63E55CDE7AE6}|winter_project\\winter_project.vcxproj|solutionrelative:winter_project\\resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Component.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Component.h",
+              "RelativeDocumentMoniker": "winter_project\\Component.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Component.h",
+              "RelativeToolTip": "winter_project\\Component.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "sceneManager.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\sceneManager.h",
+              "RelativeDocumentMoniker": "winter_project\\sceneManager.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\sceneManager.h",
+              "RelativeToolTip": "winter_project\\sceneManager.h",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Scene.h",
+              "RelativeDocumentMoniker": "winter_project\\Scene.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Scene.h",
+              "RelativeToolTip": "winter_project\\Scene.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DevScene.cpp",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\DevScene.cpp",
+              "RelativeDocumentMoniker": "winter_project\\DevScene.cpp",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\DevScene.cpp",
+              "RelativeToolTip": "winter_project\\DevScene.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-27T10:00:04.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\main.cpp",
+              "RelativeDocumentMoniker": "winter_project\\main.cpp",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\main.cpp",
+              "RelativeToolTip": "winter_project\\main.cpp",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAUwFwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-27T10:00:04.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "pch.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\pch.h",
+              "RelativeDocumentMoniker": "winter_project\\pch.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\pch.h",
+              "RelativeToolTip": "winter_project\\pch.h",
+              "ViewState": "AgIAABgAAAAAAAAAAAAnwCgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Game.cpp",
+              "RelativeDocumentMoniker": "winter_project\\Game.cpp",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Game.cpp",
+              "RelativeToolTip": "winter_project\\Game.cpp",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAF4AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-27T10:00:04.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Leveleditor.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Leveleditor.h",
+              "RelativeDocumentMoniker": "winter_project\\Leveleditor.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Leveleditor.h",
+              "RelativeToolTip": "winter_project\\Leveleditor.h",
+              "ViewState": "AgIAALQAAAAAAAAAAAAAAMQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "pch.cpp",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\pch.cpp",
+              "RelativeDocumentMoniker": "winter_project\\pch.cpp",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\pch.cpp",
+              "RelativeToolTip": "winter_project\\pch.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-27T10:00:04.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Game.h",
+              "RelativeDocumentMoniker": "winter_project\\Game.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Game.h",
+              "RelativeToolTip": "winter_project\\Game.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameScene.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\GameScene.h",
+              "RelativeDocumentMoniker": "winter_project\\GameScene.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\GameScene.h",
+              "RelativeToolTip": "winter_project\\GameScene.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ObjectManager.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\ObjectManager.h",
+              "RelativeDocumentMoniker": "winter_project\\ObjectManager.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\ObjectManager.h",
+              "RelativeToolTip": "winter_project\\ObjectManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Camera.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Camera.h",
+              "RelativeDocumentMoniker": "winter_project\\Camera.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Camera.h",
+              "RelativeToolTip": "winter_project\\Camera.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Player.h",
+              "RelativeDocumentMoniker": "winter_project\\Player.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Player.h",
+              "RelativeToolTip": "winter_project\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T11:23:00.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "object.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\object.h",
+              "RelativeDocumentMoniker": "winter_project\\object.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\object.h",
+              "RelativeToolTip": "winter_project\\object.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Vector.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Vector.h",
+              "RelativeDocumentMoniker": "winter_project\\Vector.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Vector.h",
+              "RelativeToolTip": "winter_project\\Vector.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Actor.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Actor.h",
+              "RelativeDocumentMoniker": "winter_project\\Actor.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Actor.h",
+              "RelativeToolTip": "winter_project\\Actor.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:13:04.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GameScene.cpp",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\GameScene.cpp",
+              "RelativeDocumentMoniker": "winter_project\\GameScene.cpp",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\GameScene.cpp",
+              "RelativeToolTip": "winter_project\\GameScene.cpp",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-27T10:00:04.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DevScene.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\DevScene.h",
+              "RelativeDocumentMoniker": "winter_project\\DevScene.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\DevScene.h",
+              "RelativeToolTip": "winter_project\\DevScene.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TimeManager.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\TimeManager.h",
+              "RelativeDocumentMoniker": "winter_project\\TimeManager.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\TimeManager.h",
+              "RelativeToolTip": "winter_project\\TimeManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "InputManager.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\InputManager.h",
+              "RelativeDocumentMoniker": "winter_project\\InputManager.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\InputManager.h",
+              "RelativeToolTip": "winter_project\\InputManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "InputManager.cpp",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\InputManager.cpp",
+              "RelativeDocumentMoniker": "winter_project\\InputManager.cpp",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\InputManager.cpp",
+              "RelativeToolTip": "winter_project\\InputManager.cpp",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-27T10:00:04.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Scene.cpp",
+              "RelativeDocumentMoniker": "winter_project\\Scene.cpp",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\Scene.cpp",
+              "RelativeToolTip": "winter_project\\Scene.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-27T10:00:04.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "targetver.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\targetver.h",
+              "RelativeDocumentMoniker": "winter_project\\targetver.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\targetver.h",
+              "RelativeToolTip": "winter_project\\targetver.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "resource.h",
+              "DocumentMoniker": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\resource.h",
+              "RelativeDocumentMoniker": "winter_project\\resource.h",
+              "ToolTip": "C:\\codeing\\gitClone\\winter_project\\winter_project\\winter_project\\resource.h",
+              "RelativeToolTip": "winter_project\\resource.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-27T10:00:04.654Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
