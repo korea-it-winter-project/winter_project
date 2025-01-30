@@ -1,8 +1,5 @@
 ﻿  Game.cpp
-C:\codeing\gitClone\winter_project\winter_project\winter_project\Game.cpp(101,85): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\Game.cpp(111,11): warning C4101: 'camInfo' :참조되지 않은 지역 변수입니다.
   (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
   
-C:\codeing\gitClone\winter_project\winter_project\winter_project\Game.cpp(101,72): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
-  
-  winter_project.vcxproj -> C:\codeing\gitClone\winter_project\winter_project\x64\Debug\winter_project.exe
+  winter_project.vcxproj -> E:\CPP\git_clone\winter_project\winter_project\x64\Debug\winter_project.exe

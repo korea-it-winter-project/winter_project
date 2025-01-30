@@ -6,34 +6,56 @@
 #include "Camera.h" // 카메라 헤더 추가
 
 Game::Game() {
-    // 생성자 구현
-    int* p = new int();
-    GET_SINGLE(SceneManager)->ChScene(sceneType::Leveleditor);
+    GET_SINGLE(SceneManager)->ChScene(sceneType::DevScene);
 
     // 카메라 초기화 (초기 화면 크기 설정)
-    camera = Camera(0.0f,0.0f);
+    camera = Camera(0.0f, 0.0f);
 }
 
 Game::~Game() {
-    // 메모리 해제
+    // 백 버퍼와 DC 해제
+    if (_tempBack) {
+        ::DeleteObject(_tempBack);
+        _tempBack = nullptr;
+    }
+    if (_hdcBack) {
+        ::DeleteDC(_hdcBack);
+        _hdcBack = nullptr;
+    }
+    if (_hdc) {
+        ::ReleaseDC(_hwnd, _hdc);
+        _hdc = nullptr;
+    }
 }
 
 void Game::SceneSzieCH(HWND hwnd) {
     _hwnd = hwnd;
     ::GetClientRect(hwnd, &_rect);
+
+    // 기존 백 버퍼 삭제
+    if (_tempBack) {
+        ::DeleteObject(_tempBack);
+    }
+    if (_hdcBack) {
+        ::DeleteDC(_hdcBack);
+    }
+
+    // 백 버퍼 및 호환 DC 재생성
     _hdcBack = ::CreateCompatibleDC(_hdc);
     _tempBack = ::CreateCompatibleBitmap(_hdc, _rect.right, _rect.bottom);
     HBITMAP prev = (HBITMAP)::SelectObject(_hdcBack, _tempBack);
     ::DeleteObject(prev);
 
-    // 윈도우 크기 변경 시 카메라 뷰포트 크기 갱신
-    //camera.SetViewportSize((float)_rect.right, (float)_rect.bottom);
+    // 카메라 뷰포트 크기 갱신
+    camera.SetViewportSize((float)_rect.right, (float)_rect.bottom);
 }
 
 void Game::Init(HWND hwnd) {
     _hwnd = hwnd;
     _hdc = ::GetDC(hwnd);
     ::GetClientRect(hwnd, &_rect);
+
+    // 백 버퍼 생성
     _hdcBack = ::CreateCompatibleDC(_hdc);
     _tempBack = ::CreateCompatibleBitmap(_hdc, _rect.right, _rect.bottom);
     HBITMAP prev = (HBITMAP)::SelectObject(_hdcBack, _tempBack);
@@ -42,11 +64,10 @@ void Game::Init(HWND hwnd) {
     GET_SINGLE(TimeManager)->Init();
     GET_SINGLE(InputManager)->Init(hwnd);
     GET_SINGLE(UiManager)->init();
-
     GET_SINGLE(SceneManager)->Init();
 
     // 카메라 초기화 (초기 뷰포트 크기 설정)
-    //camera = Camera((float)_rect.right, (float)_rect.bottom);
+    camera.SetViewportSize((float)_rect.right, (float)_rect.bottom);
 }
 
 void Game::Update() {
@@ -78,26 +99,25 @@ void Game::Render() {
     float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
     POINT m_pos = GET_SINGLE(InputManager)->GetMousePos();
     WCHAR str[1024];
-    
+
+    // 백 버퍼 초기화
+    ::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS);
 
     // 카메라 좌표를 기반으로 월드 좌표 → 화면 좌표 변환
-    Vector worldPos(0,0); // 월드 좌표 예시
+    Vector worldPos(0, 0); // 월드 좌표 예시
     Vector screenPos = camera.WorldToScreen(worldPos);
 
+    // 카메라 디버그 정보 출력
     WCHAR camInfo[1024];
-    
-    // 화면에 출력 (변환된 화면 좌표 기준)
+    //wsprintfW(camInfo, L"Camera pos : [%04d, %04d]", (int)camera.GetPosition().x, (int)camera.GetPosition().y);
+    //::TextOut(_hdcBack, 10, 10, camInfo, lstrlen(camInfo));
+    wsprintfW(str, L"mouse pos : [%04d, %04d]", m_pos.x, m_pos.y);
+    ::TextOut(_hdcBack, 10, 30, str, lstrlen(str));
 
     // UI 및 씬 렌더링
     GET_SINGLE(UiManager)->Render(_hdcBack);
-    GET_SINGLE(SceneManager)->Render(_hdcBack);
+    GET_SINGLE(SceneManager)->Render(_hdcBack,camera);
 
-    //::TextOut(_hdcBack, (int)screenPos.x, (int)screenPos.y, L"Camera Target", 13);
-    wsprintfW(camInfo, L"Camera pos : [%04d, %04d]", (int)camera.GetPosition().x, (int)camera.GetPosition().y);
-    ::TextOut(_hdcBack, (int)screenPos.x + 20, (int)screenPos.y + 30, camInfo, lstrlen(camInfo));
-    wsprintfW(str, L"mouse pos : [%04d, %04d]", m_pos.x, m_pos.y);
-    ::TextOut(_hdcBack, (int)screenPos.x + 20, (int)screenPos.y + 10, str, lstrlen(str));
-    // 더블 버퍼링으로 화면 출력
-    ::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack, screenPos.x, screenPos.y, SRCCOPY);
-    ::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS);
+    // 화면 출력
+    ::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack, 0, 0, SRCCOPY);
 }

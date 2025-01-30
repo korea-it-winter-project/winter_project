@@ -4,7 +4,8 @@
 #include "DevScene.h"
 #include "GameScene.h"
 #include "Leveleditor.h"
-
+#include "object.h"
+//class Oject;
 
 enum class sceneType {
     DevScene,
@@ -27,9 +28,17 @@ public:
             _scene->Update();
         }
     };  // 선언
-    void Render(HDC hdc) {
+    void Render(HDC hdc,Camera& camera) {
         if (_scene) {
             _scene->Render(hdc);
+        }
+        for (auto obj : objects) {
+            if (!obj->IsDead()) {
+                // 카메라 뷰포트 내에 있는 경우만 렌더링
+                if (camera.IsInView(obj->GetPos(), obj->GetSize().x, obj->GetSize().y)) {
+                    obj->Render(hdc);
+                }
+            }
         }
     };  // 선언
 
@@ -70,5 +79,7 @@ public :
         //    object.Render(hdc, screenPos);
         //}
     };
+private:
+    std::vector<Object*> objects;
 };
 

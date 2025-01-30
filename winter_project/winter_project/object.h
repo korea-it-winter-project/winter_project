@@ -3,45 +3,56 @@
 #include "pch.h"
 
 struct Stat {
-	INT32 Hp = 0;
-	UINT32 MaxHP = 0; //음수로 못넘어 가게 부호 없는 정수로 지정
-	float speed;
-	UINT32 damage=0; 
-	/*
-	간혹 게임중 공격도중 음수 값이 나와 딜이아니라
-	적을 힐을 하는 경우가 있음 이를 막기 위해 부호 없는 정수로 지정
-	*/
+    INT32 Hp = 0;
+    UINT32 MaxHP = 0; // 음수로 못 넘어가게 부호 없는 정수로 지정
+    float speed = 0.0f;
+    UINT32 damage = 0;
+    /*
+    공격 중 음수 값으로 인해 적을 힐하는 경우 방지
+    */
 };
 
-
 enum class ObjectType {
-	None,
-	Player,
-	Monster,
-	Projectle,
-	block,
+    None,
+    Player,
+    Monster,
+    Projectile,
+    Block,
 };
 
 class Object {
 public:
-	Object(ObjectType objType) {};
-	~Object() {};
+    Object(ObjectType objType) : _type(objType) {}
+    virtual ~Object() {}
 
-	virtual void Init() abstract {};
-	virtual void Update() abstract {
-		if (test) {
+    virtual void Init() = 0;
+    virtual void Update() = 0;
+    virtual void Render(HDC hdc) = 0;
 
-		}
-	};
-	virtual void Render(HDC hdc) abstract {};
+    // 오브젝트 타입 반환
+    ObjectType GetObjectType() const { return _type; }
 
-public :
-	ObjectType GetObjectType() { return _type; }
-	FPOINT GetPos() { return _pos; }
-	void SetPos(FPOINT pos) { _pos = pos; }
+    // 오브젝트 위치 관련 함수
+    FPOINT GetPos() const { return _pos; }
+    void SetPos(FPOINT pos) { _pos = pos; }
+
+    // 오브젝트 크기 설정 및 가져오기
+    FPOINT GetSize() const { return _size; }
+    void SetSize(FPOINT size) { _size = size; }
+
+    // 체력 관련 함수
+    void TakeDamage(UINT32 dmg) {
+        if (_stat.Hp > (INT32)dmg)
+            _stat.Hp -= dmg;
+        else
+            _stat.Hp = 0;
+    }
+
+    bool IsDead() const { return _stat.Hp <= 0; }
+
 protected:
-	ObjectType _type = ObjectType::None;
-	Stat _stat = {};
-	FPOINT _pos = {};
-	bool test;
+    ObjectType _type = ObjectType::None; // 오브젝트 타입
+    Stat _stat = {};                     // 스탯 정보
+    FPOINT _pos = {};                    // 위치
+    FPOINT _size = { 0.0f, 0.0f };         // 크기
 };
