@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "object.h"
 
-class Object;
+//class Object;
 
 class ObjectManager {
     DECLARE_SINGLE(ObjectManager);
@@ -51,6 +51,24 @@ public:
         return object;
     }
 
+
+    void CheckCollisions() {
+        for (size_t i = 0; i < _objects.size(); ++i) {
+            Collider* colliderA = _objects[i]->GetCollider();
+            if (!colliderA) continue;  // 충돌체가 없는 경우 무시
+
+            for (size_t j = i + 1; j < _objects.size(); ++j) {
+                Collider* colliderB = _objects[j]->GetCollider();
+                if (!colliderB) continue;  // 충돌체가 없는 경우 무시
+
+                if (colliderA->CheckCollision(colliderB)) {
+                    // **충돌 발생 시 처리**
+                    _objects[i]->OnCollision(colliderB);
+                    _objects[j]->OnCollision(colliderA);
+                }
+            }
+        }
+    }
 private:
     std::vector<Object*> _objects;
 };

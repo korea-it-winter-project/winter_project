@@ -1,5 +1,11 @@
-﻿  Game.cpp
-E:\CPP\git_clone\winter_project\winter_project\winter_project\Game.cpp(111,11): warning C4101: 'camInfo' :참조되지 않은 지역 변수입니다.
-  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
-  
+﻿  pch.cpp
+  DevScene.cpp
+  Game.cpp
+  GameScene.cpp
+  InputManager.cpp
+  Leveleditor.cpp
+  Scene.cpp
+  TimeManager.cpp
+  main.cpp
+  코드를 생성하고 있습니다...
   winter_project.vcxproj -> E:\CPP\git_clone\winter_project\winter_project\x64\Debug\winter_project.exe

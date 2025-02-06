@@ -13,8 +13,11 @@ static const int MAP_COLS = 80;   // 가로 타일 개수
 static const int MAP_ROWS = 45;   // 세로 타일 개수
 
 class Leveleditor : public Scene {
+    class Player* _player = nullptr;
 public:
     Leveleditor() {
+       /* _player = new Player();
+        _player->Init();*/
         // 타일 배열 초기화
         for ( int y = 0; y < MAP_ROWS; ++y ) {
             for ( int x = 0; x < MAP_COLS; ++x ) {
@@ -32,6 +35,9 @@ public:
     };
 
     virtual void Update() override {
+
+
+
         if ( GetAsyncKeyState( VK_DELETE ) & 0x0001 )
         {
             if ( MessageBox( nullptr,TEXT( "※맵 데이터를 초기화하시겠습니까?" ),TEXT( "주의" ),MB_YESNO | MB_ICONWARNING /*경고 아이콘*/) 

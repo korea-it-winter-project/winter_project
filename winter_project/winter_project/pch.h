@@ -37,16 +37,21 @@ public:                                   \
 
 // 프로젝트 관련 헤더 파일
 #include "sceneManager.h"
-#include "Game.h"
 #include "InputManager.h"
 #include "TimeManager.h"
 #include "Scene.h"
-#include "Player.h"
-#include "object.h"
+#include "utils.h"
 
+#include "object.h"
+#include "Collider.h"
+
+#include "Player.h"
+#include "monster.h"
+
+#include "Game.h"
 
 // 디버깅 관련 설정 (디버그 빌드에서 메모리 할당 추적)
 #define _CRTDBG_MAP_ALLOC
 #ifdef _DEBUG
 #define new new(_NORMAL_BLOCK,__FILE__,__LINE__)
-#endif
+#endif 

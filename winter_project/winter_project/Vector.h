@@ -57,5 +57,5 @@ public:
     float y = 0.0f;
 };
 
-// FPOINT 타입 정의 (Vector로 대체 가능)
-using FPOINT = Vector;
+// 
+//  타입 정의 (Vector로 대체 가능)

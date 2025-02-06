@@ -56,13 +56,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow) {
     hInst = hInstance;
 
-    RECT winRect = { 0, 0, 800, 600 };
+    RECT winRect = { 0, 0, 1000, 600 };
     AdjustWindowRect(&winRect, WS_OVERLAPPEDWINDOW, FALSE);
 
     HWND hWnd = CreateWindowW(
         L"GameCoding2",      // 클래스 이름 (MyRegisterClass에서 등록한 이름)
         L"Game Window",      // 윈도우 제목
-        WS_OVERLAPPEDWINDOW, // 스타일
+        WS_OVERLAPPED | WS_SYSMENU, // 스타일
         CW_USEDEFAULT, 0,
         winRect.right - winRect.left,
         winRect.bottom - winRect.top,
@@ -102,6 +102,9 @@ ATOM MyRegisterClass(HINSTANCE hInstance) {
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam) {
     switch (iMessage) {
+    case WM_CREATE:
+        ShowCursor(false);
+        return 0;
     case WM_SIZE:
         game.SceneSzieCH(g_hwnd);
                  

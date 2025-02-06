@@ -32,14 +32,6 @@ public:
         if (_scene) {
             _scene->Render(hdc);
         }
-        for (auto obj : objects) {
-            if (!obj->IsDead()) {
-                // 카메라 뷰포트 내에 있는 경우만 렌더링
-                if (camera.IsInView(obj->GetPos(), obj->GetSize().x, obj->GetSize().y)) {
-                    obj->Render(hdc);
-                }
-            }
-        }
     };  // 선언
 
 public :
@@ -71,14 +63,6 @@ public :
 
         newScene->Init(nullptr);
     };  // 선언
-    void RenderWithCamera(HDC hdc, const Camera& camera) {
-        // 모든 게임 오브젝트를 순회하면서, WorldToScreen으로 변환하여 그리기
-        //for (auto& object : gameObjects) {
-        //    Vector screenPos = camera.WorldToScreen(object.GetPosition());
-        //    // 화면 좌표(screenPos)를 이용해 오브젝트를 그리기
-        //    object.Render(hdc, screenPos);
-        //}
-    };
 private:
     std::vector<Object*> objects;
 };

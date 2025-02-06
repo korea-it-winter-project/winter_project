@@ -72,9 +72,6 @@
     <ClInclude Include="Scene.h">
       <Filter>소스 파일\04.scene</Filter>
     </ClInclude>
-    <ClInclude Include="object.h">
-      <Filter>소스 파일\05.object</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>소스 파일\05.object</Filter>
     </ClInclude>
@@ -98,6 +95,21 @@
     </ClInclude>
     <ClInclude Include="Actor.h">
       <Filter>소스 파일\05.object</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>소스 파일\03.manager\hader</Filter>
+    </ClInclude>
+    <ClInclude Include="monster.h">
+      <Filter>소스 파일\05.object</Filter>
+    </ClInclude>
+    <ClInclude Include="object.h">
+      <Filter>소스 파일\05.object</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>소스 파일\06.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>소스 파일\06.Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

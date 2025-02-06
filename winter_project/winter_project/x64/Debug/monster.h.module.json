@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\monster.h.obj",
+            "outputs": [
+                "E:\\CPP\\git_clone\\winter_project\\winter_project\\winter_project\\x64\\Debug\\vc143.pdb",
+                "x64\\Debug\\",
+                "E:\\CPP\\git_clone\\winter_project\\winter_project\\winter_project\\x64\\Debug\\monster.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "monster.h",
+                    "source-path": "e:\\cpp\\git_clone\\winter_project\\winter_project\\winter_project\\monster.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
