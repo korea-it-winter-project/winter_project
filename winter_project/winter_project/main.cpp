@@ -3,6 +3,9 @@
 #include "InputManager.h"
 #include "TimeManager.h"
 
+#pragma comment(linker,"/entry:WinMainCRTStartup /subsystem:console")
+
+
 HINSTANCE hInst;
 HWND g_hwnd;
 
@@ -103,14 +106,17 @@ ATOM MyRegisterClass(HINSTANCE hInstance) {
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam) {
     switch (iMessage) {
     case WM_CREATE:
+        AllocConsole();
+        //GetConsoleMode();
         ShowCursor(false);
         return 0;
     case WM_SIZE:
-        game.SceneSzieCH(g_hwnd);
+        //game.SceneSzieCH(g_hwnd);
                  
         InvalidateRect(hWnd, NULL, false);
         return 0;
     case WM_DESTROY:
+        FreeConsole();
         PostQuitMessage(0);
         return 0;
     default:

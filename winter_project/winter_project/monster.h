@@ -4,6 +4,8 @@
 #include "TimeManager.h"
 #include "object.h"
 #include "utils.h"
+#define MR 10
+#define MC 10
 
 class Monster : public Object {
 public:
@@ -25,8 +27,31 @@ public:
     virtual void Render(HDC hdc) override {
         ut.DrawCircle(hdc, _pos, 50);
     };
-
+    int smt(int n, int* dat) {  // smt는 디코로 다시 설명 함
+        int i, j, * p, dir;
+        do {
+            j = 0;
+            for (i = MC; i < (MR - 1) * MC; i++) if (*(dat + i) == n) {
+                j++;
+                for (dir = 1; dir < 5; dir++) {
+                    p = (dat + i) + sdir1[dir];
+                    if (!*p)*p = n + 1;
+                    else if (*p == 999) {
+                        if (!quit) quit = i + sdir1[dir];
+                        if (quit && mptr == 0) quit2 = i; // 도착지-1
+                        else if (quit && !quit2) quit2 = i + sdir1[dir]; // 도착지-1
+                        path[mptr++] = dir;
+                        *(dat + i) = 999;
+                        return 1;
+                    }
+                }
+            }
+        } while (j && smt(n + 1, dat));
+        return 0;
+    }
 public:
     utils ut;
+    int path[50], mptr = 0, mptr2 = 0, quit = 0, quit2 = 0;
+    int sdir1[5] = { 0,-MC,1,MC,-1 }; // 앞 오른 뒤 왼
 };
 

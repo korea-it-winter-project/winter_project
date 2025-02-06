@@ -1,11 +1,2 @@
-﻿  pch.cpp
-  DevScene.cpp
-  Game.cpp
-  GameScene.cpp
-  InputManager.cpp
-  Leveleditor.cpp
-  Scene.cpp
-  TimeManager.cpp
-  main.cpp
-  코드를 생성하고 있습니다...
+﻿  main.cpp
   winter_project.vcxproj -> E:\CPP\git_clone\winter_project\winter_project\x64\Debug\winter_project.exe

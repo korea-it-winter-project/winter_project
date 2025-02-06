@@ -12,7 +12,6 @@ public:                                   \
 }
 #define GET_SINGLE(classname) classname::GetInstance()
 
-
 // Windows 관련 헤더 파일 (필요한 최소한의 것만 포함)
 #include <SDKDDKVer.h>
 #define WIN32_LEAN_AND_MEAN    // Windows 헤더에서 거의 사용되지 않는 내용을 제외합니다.

@@ -4,6 +4,7 @@
 #include "object.h"
 #include "utils.h"
 #include "Collider.h"
+#include "pch.h"
 
 
 class Player : public Object {
@@ -40,6 +41,8 @@ public :
 	void OnCollision(Collider* other) {
 		if (other->GetOwner()->GetObjectType() == ObjectType::Monster) {
 			IsDead();
+			//TRACE(L"test");
+			printf("test");
 		}
 	}
 public:
