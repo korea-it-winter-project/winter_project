@@ -4,20 +4,25 @@
 #include "DevScene.h"
 #include "GameScene.h"
 #include "Leveleditor.h"
-#include "object.h"
-//class Oject;
+#include "StartScene.h"
+#include "UiScene.h"
+#include "BackScene.h"
+
 
 enum class sceneType {
-    DevScene,
+    DevScene  = 0 ,
     GameScene,
     Leveleditor,
+    StartScene,
+    UiScene,
     none
 };
 
 class SceneManager {
 private:
-    class Scene* _scene;
+    class Scene* _scene = nullptr;
     sceneType _sceneType = sceneType::none;
+    sceneType _lastSceneType = sceneType::none;
     DECLARE_SINGLE(SceneManager);
 public:
     void Init() {
@@ -28,11 +33,14 @@ public:
             _scene->Update();
         }
     };  // 識情
-    void Render(HDC hdc,Camera& camera) {
+    void Render(HDC hdc) {
         if (_scene) {
             _scene->Render(hdc);
         }
     };  // 識情
+    sceneType GetNowScene() {
+        return _sceneType;
+    }
 
 public :
     void ChScene(sceneType sc_type) {
@@ -50,20 +58,25 @@ public :
         case sceneType::Leveleditor:
             newScene = new Leveleditor();
             break;
+        case sceneType::StartScene:
+            newScene = new StartScene();
+            break;
+        case sceneType::UiScene:
+            newScene = new UiScene();
+            break;
         }
-        
 
         if (_scene) {
             delete _scene;
             _scene = nullptr;
         }
 
+        _lastSceneType = _sceneType;
+
         _scene = newScene;
         _sceneType = sc_type;
 
-        newScene->Init(nullptr);
+        newScene->Init();
     };  // 識情
-private:
-    std::vector<Object*> objects;
 };
 

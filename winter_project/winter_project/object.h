@@ -20,6 +20,7 @@ enum class ObjectType {
     Monster,
     Projectile,
     Block,
+    Tower,
 };
 
 
@@ -28,12 +29,12 @@ public:
     Object(ObjectType objType) : _type(objType) {}
     virtual ~Object() {}
 
-    virtual void Init(){};
+    virtual void Init() {};
     virtual void Update() {
 
     };
     virtual void Render(HDC hdc) {
-        
+
     };
 
     // 오브젝트 타입 반환
@@ -46,6 +47,8 @@ public:
     // 오브젝트 크기 설정 및 가져오기
     Vector GetSize() const { return _size; }
     void SetSize(Vector size) { _size = size; }
+
+    void SetBmp(std::shared_ptr<Gdiplus::Bitmap> _pBmp) { pBmp = _pBmp; }
 
     // 체력 관련 함수
     void TakeDamage(UINT32 dmg) {
@@ -60,7 +63,7 @@ public:
     void SetCollider(Collider* collider) { _collider = collider; }
     Collider* GetCollider() const { return _collider; }
 
-    
+
     virtual void OnCollision(Collider* other) {
 
     }
@@ -69,7 +72,8 @@ protected:
     ObjectType _type = ObjectType::None; // 오브젝트 타입
     Stat _stat = {};                     // 스탯 정보
     Vector _pos = {};                    // 위치
-    Vector _size = { 0.0f, 0.0f };         // 크기
+    Vector _size = { 0.0f, 0.0f };       // 크기
     Collider* _collider;
+    std::shared_ptr<Gdiplus::Bitmap> pBmp;
 };
 

@@ -7,7 +7,7 @@ void InputManager::Init(HWND hwnd)
 	_states.resize(KEY_TYPE_COUNT, KeyState::none);
 }
 
-void InputManager::Update()
+void InputManager::Update(RECT _rect)
 {
 	BYTE asciiKeys[KEY_TYPE_COUNT] = {};
 	if (::GetKeyboardState(asciiKeys) == false)
@@ -37,7 +37,9 @@ void InputManager::Update()
 				state = KeyState::none;
 		}
 	}
+
 	// Mouse
 	::GetCursorPos(&_mousePos); // 커서의 좌표를 알아온다
 	::ScreenToClient(_hwnd, &_mousePos);
+	rect = _rect;
 }

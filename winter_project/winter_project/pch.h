@@ -34,6 +34,9 @@ public:                                   \
 #include <algorithm>
 #include <format>
 
+#include <objidl.h>
+#include <gdiplus.h>
+#pragma comment(lib, "gdiplus.lib")
 // 프로젝트 관련 헤더 파일
 #include "sceneManager.h"
 #include "InputManager.h"

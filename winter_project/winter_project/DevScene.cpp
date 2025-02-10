@@ -14,7 +14,7 @@ DevScene::DevScene() {
 DevScene::~DevScene() {
 
 }
-void DevScene::Init(HWND hwnd) {
+void DevScene::Init() {
 	_player = new Player();
 	_player->Init ();
 }

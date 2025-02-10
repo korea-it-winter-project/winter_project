@@ -35,7 +35,6 @@ public :
 			_pos.y += _stat.speed * deltaTime;
 	};
 	virtual void Render(HDC hdc) override {
-		//Rectangle(hdc, (int)(_pos.x - _size.x)/2, (int)(_pos.y - _size.y)/2, (int)(_pos.x - _size.x) / 2, (int)(_pos.y - _size.y) / 2);
 		ut.DrawRect(hdc, _pos, 50, 50);
 	};
 	void OnCollision(Collider* other) {

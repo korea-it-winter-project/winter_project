@@ -111,6 +111,27 @@
     <ClInclude Include="BoxCollider.h">
       <Filter>소스 파일\06.Component</Filter>
     </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>소스 파일\03.manager\hader</Filter>
+    </ClInclude>
+    <ClInclude Include="MapData.h">
+      <Filter>소스 파일\99.Hader</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>소스 파일\05.object</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolUi.h">
+      <Filter>소스 파일\04.scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BackScene.h">
+      <Filter>소스 파일\04.scene</Filter>
+    </ClInclude>
+    <ClInclude Include="StartScene.h">
+      <Filter>소스 파일\04.scene</Filter>
+    </ClInclude>
+    <ClInclude Include="UiScene.h">
+      <Filter>소스 파일\04.scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -139,6 +160,18 @@
     </ClCompile>
     <ClCompile Include="Leveleditor.cpp">
       <Filter>소스 파일\99.Hader</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>소스 파일\03.manager\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="MapData.cpp">
+      <Filter>소스 파일\99.Hader</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>소스 파일\05.object</Filter>
+    </ClCompile>
+    <ClCompile Include="StartScene.cpp">
+      <Filter>소스 파일\04.scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

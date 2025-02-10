@@ -6,6 +6,7 @@ enum class keytype {
 	R_mouse = VK_RBUTTON,
 
 	L_Ctrl = VK_CONTROL,
+	BACKSP = VK_BACK,
 	ESC = VK_ESCAPE,
 
 	UP = VK_UP,
@@ -36,17 +37,24 @@ class InputManager {
 	DECLARE_SINGLE(InputManager);
 public:
 	void Init(HWND hwnd);
-	void Update();
+	void Update(RECT _rect);
 
 
 	bool GetButton(keytype key) { return GetState(key) == KeyState::Press; }
 	bool GetButtonDwon(keytype key) { return GetState(key) == KeyState::Down; }
 	bool GetButtonUP(keytype key) { return GetState(key) == KeyState::Up; }
 	POINT GetMousePos() { return _mousePos; }
+	int CheckMousePoint(RECT rect) {
+		if ((_mousePos.x - rect.left) * (_mousePos.x - rect.right) <= 0 && (_mousePos.y - rect.top) * (_mousePos.y - rect.bottom) <= 0)
+			return 1;
+		else return 0;
+	}
+	RECT GetRect() { return rect; }
 private:
 	KeyState GetState(keytype key) { return _states[static_cast<UINT8>(key)]; }
 private:
 	HWND _hwnd = 0;
 	std::vector <KeyState>_states;
 	POINT _mousePos;
+	RECT rect;
 };

@@ -24,5 +24,5 @@ private:
 	HDC _hdcText = {};
 	HBITMAP _tempBack = {};
 
-	Camera camera;
+	//Camera camera;
 };

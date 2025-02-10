@@ -6,10 +6,10 @@ public:
 	Scene();
 	virtual ~Scene();
 
-	virtual void Init(HWND hwnd) abstract;
+	virtual void Init() abstract;
 	virtual void Update() abstract;
 	virtual void Render(HDC hdc) abstract;
-protected:
+protected: 
 
 };
 

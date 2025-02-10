@@ -41,11 +41,11 @@ public:
         return _objects;
     }
 
-    template<typename T>
-    T* CreateObject() {
+    template<typename T, typename... Args>
+    T* CreateObject(Args&&... args) {
         static_assert(std::is_base_of<Object, T>::value, "T must be derived from Object");
 
-        T* object = new T();
+        T* object = new T(std::forward<Args>(args)...);
         object->Init();  // Object 클래스 또는 파생 클래스에 Init 메서드가 있어야 합니다.
         Add(object);
         return object;

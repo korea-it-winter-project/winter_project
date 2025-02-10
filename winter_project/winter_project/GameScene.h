@@ -14,7 +14,7 @@ public :
 	GameScene() {};
 	virtual ~GameScene() override {};
 
-	virtual void Init(HWND hwnd)override {
+	virtual void Init()override {
 		{
 			Player* player = GET_SINGLE(ObjectManager)->CreateObject<Player>();
 			player->SetPos(Vector{ 400,400 });
@@ -28,7 +28,6 @@ public :
 			monster->SetSize(Vector{ 25,25 });
 			GET_SINGLE(ObjectManager)->Add(monster);
 			monster->SetCollider(new BoxCollider(monster, monster->GetSize()));
-			/*player->SetCollider(new BoxCollider(player, player->GetSize()));*/
 		}
 	};
 	virtual void Update()override {

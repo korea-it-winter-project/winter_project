@@ -2,6 +2,9 @@
 #include "Game.h" // Game 클래스 추가
 #include "InputManager.h"
 #include "TimeManager.h"
+#include "ResourceManager.h"
+
+ULONG_PTR g_GdiToken; // GDI+ 토큰 전역변수
 
 #pragma comment(linker,"/entry:WinMainCRTStartup /subsystem:console")
 
@@ -24,6 +27,11 @@ LPCTSTR lpszClass = TEXT("모질이들");
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdParam, int nCmdShow) {
     MSG msg = {};
     g_hInst = hInstance;
+
+    // 1) GDI+ 초기화
+    Gdiplus::GdiplusStartupInput gdiplusStartupInput;
+    Gdiplus::GdiplusStartup(&g_GdiToken, &gdiplusStartupInput, NULL);
+
 
     // 1. 윈도우 클래스 등록
     if (!MyRegisterClass(hInstance)) {
@@ -52,9 +60,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
             game.Render();
         }
     }
+    GET_SINGLE(ResourceManager)->~ResourceManager();
+
+    Gdiplus::GdiplusShutdown(g_GdiToken);
 
     return (int)msg.wParam;
-} 
+}
 
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow) {
     hInst = hInstance;
@@ -71,7 +82,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow) {
         winRect.bottom - winRect.top,
         nullptr, nullptr, hInstance, nullptr
     );
-       
+
     g_hwnd = hWnd;
 
     if (!hWnd) {
@@ -108,15 +119,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
     case WM_CREATE:
         AllocConsole();
         //GetConsoleMode();
-        ShowCursor(false);
+        //ShowCursor( false );
         return 0;
     case WM_SIZE:
-        //game.SceneSzieCH(g_hwnd);
-                 
+
         InvalidateRect(hWnd, NULL, false);
         return 0;
     case WM_DESTROY:
         FreeConsole();
+        SendMessage(hWnd, WM_CLOSE, 0, 0);
         PostQuitMessage(0);
         return 0;
     default:
