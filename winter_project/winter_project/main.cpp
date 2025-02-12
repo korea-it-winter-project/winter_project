@@ -121,10 +121,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
         //GetConsoleMode();
         //ShowCursor( false );
         return 0;
-    case WM_SIZE:
 
-        InvalidateRect(hWnd, NULL, false);
-        return 0;
     case WM_DESTROY:
         FreeConsole();
         SendMessage(hWnd, WM_CLOSE, 0, 0);

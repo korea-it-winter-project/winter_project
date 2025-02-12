@@ -11,13 +11,18 @@ public:
     ~ObjectManager() {
         clear();
     }
-
+    void Render(HDC hdc) {
+        for (auto* obj : _objects) {
+            obj->Render(hdc);
+        }
+    }
+    int GetObjC() { return objcount; }
     void Add(Object* object) {
         if (object == nullptr) return;
 
         auto findIt = std::find(_objects.begin(), _objects.end(), object);
         if (findIt != _objects.end()) return;
-
+        objcount++;
         _objects.push_back(object);
     }
 
@@ -34,7 +39,7 @@ public:
         for (auto* obj : _objects) {
             delete obj;
         }
-        _objects.clear();
+        //_objects.clear();
     }
 
     const std::vector<Object*>& GetObjects() const {
@@ -53,22 +58,22 @@ public:
 
 
     void CheckCollisions() {
-        for (size_t i = 0; i < _objects.size(); ++i) {
-            Collider* colliderA = _objects[i]->GetCollider();
-            if (!colliderA) continue;  // 충돌체가 없는 경우 무시
+        for (size_t i = 0; i < _objects.size(); i++) {
+            for (size_t j = i + 1; j < _objects.size(); j++) {
+                Object* objA = _objects[i];
+                Object* objB = _objects[j];
 
-            for (size_t j = i + 1; j < _objects.size(); ++j) {
-                Collider* colliderB = _objects[j]->GetCollider();
-                if (!colliderB) continue;  // 충돌체가 없는 경우 무시
+                if (!objA->GetCollider() || !objB->GetCollider()) continue;
 
-                if (colliderA->CheckCollision(colliderB)) {
-                    // **충돌 발생 시 처리**
-                    _objects[i]->OnCollision(colliderB);
-                    _objects[j]->OnCollision(colliderA);
+                if (objA->GetCollider()->CheckCollision(objB->GetCollider())) {
+                    objA->OnCollision(objB->GetCollider());
+                    objB->OnCollision(objA->GetCollider());
                 }
             }
         }
     }
+
 private:
     std::vector<Object*> _objects;
+    int objcount;
 };

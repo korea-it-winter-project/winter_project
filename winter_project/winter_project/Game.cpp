@@ -14,7 +14,7 @@
 Game::Game() {
     // 생성자 구현
     int* p = new int();
-    GET_SINGLE(SceneManager)->ChScene(sceneType::StartScene);
+    GET_SINGLE(SceneManager)->ChScene(sceneType::GameScene);
 }
 
 Game::~Game() {
@@ -22,8 +22,10 @@ Game::~Game() {
 }
 
 void Game::Init(HWND hwnd) {
+    //_his = his;
     _hwnd = hwnd;
     _hdc = ::GetDC(hwnd);
+    //_hdc = ::BeginPaint(hwnd, &_ps);
     ::GetClientRect(hwnd, &_rect);
     _hdcBack = ::CreateCompatibleDC(_hdc);
     _tempBack = ::CreateCompatibleBitmap(_hdc, _rect.right, _rect.bottom);
@@ -40,7 +42,7 @@ void Game::Init(HWND hwnd) {
     GET_SINGLE(ResourceManager)->LoadImagesIntoManager(L"..\\winter_project\\Dirt"); // png불러오기
     GET_SINGLE(ResourceManager)->LoadImagesIntoManager(L"..\\winter_project\\projectile");
     GET_SINGLE(ResourceManager)->LoadImagesIntoManager(L"..\\winter_project\\Stone");
-
+       
     GET_SINGLE(ToolUi)->Init();
     GET_SINGLE(BackScene)->Init();
 }
@@ -61,15 +63,16 @@ void Game::Update() {
 
     GET_SINGLE(ToolUi)->Update(_rect);
     GET_SINGLE(BackScene)->Update(_rect);
+    GET_SINGLE(ObjectManager)->CheckCollisions();
 }
 
 void Game::Render() {
     Gdiplus::Graphics graphics(_hdcBack);
-
     UINT32 fps = GET_SINGLE(TimeManager)->GetFps();
     float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
     // 마우스 좌표
     POINT m_pos = GET_SINGLE(InputManager)->GetMousePos();
+    int objcount = 0;
     /*WCHAR str[1024];
     wsprintfW(str, L"mouse pos : [%04d, %04d]", m_pos.x, m_pos.y);
     ::TextOut(_hdcBack, 20, 10, str, lstrlen(str));*/
@@ -82,23 +85,25 @@ void Game::Render() {
 
     std::shared_ptr<Gdiplus::Bitmap> image = GET_SINGLE(ResourceManager)->FindImage(L"dirt_3.png");
     //std::wstring fileName;
-    int tileX = m_pos.x / TILE_SIZE;
+    /*int tileX = m_pos.x / TILE_SIZE;
     int tileY = m_pos.y / TILE_SIZE;
     int drawX = tileX * TILE_SIZE;
     int drawY = tileY * TILE_SIZE;
     if (GET_SINGLE(MapData)->GetTile(tileX, tileY) != 1) {
         GET_SINGLE(ResourceManager)->DrawImageWithAlpha(graphics, image, drawX, drawY, TILE_SIZE, TILE_SIZE, 0.5f);
-    }
+    }*/
 
     const std::vector<Object*> objects = GET_SINGLE(ObjectManager)->GetObjects();
     for (Object* object : objects)
         object->Render(_hdcBack);
+    GET_SINGLE(ObjectManager)->Render(_hdcBack);
     GET_SINGLE(ToolUi)->Render(_hdcBack);
     GET_SINGLE(BackScene)->Render(_hdcBack);
 
     WCHAR str[1024];
-    wsprintfW(str, L"fps : [%04d]", fps);
+    wsprintfW(str, L"fps[%04d] / obj[%04d]", fps,GET_SINGLE(ObjectManager)->GetObjC());
     ::TextOut(_hdcBack, 10, 10, str, lstrlen(str));
+
 
     // 백버퍼 -> 화면
     ::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack, 0, 0, SRCCOPY);

@@ -25,6 +25,17 @@ public:
 
     };
     virtual void Render(HDC hdc) override {
+        if (_collider) {
+            HPEN hPen = CreatePen(PS_SOLID, 1, RGB(255, 0, 0)); // 빨간색 테두리
+            HGDIOBJ oldPen = SelectObject(hdc, hPen);
+            HBRUSH hBrush = (HBRUSH)GetStockObject(HOLLOW_BRUSH); // 내부 비우기
+            HGDIOBJ oldBrush = SelectObject(hdc, hBrush);
+            Rectangle(hdc, _pos.x - _collider->_size.x, _pos.y - _collider->_size.y,
+                _pos.x + _collider->_size.x, _pos.y + _collider->_size.y);
+            SelectObject(hdc, oldPen);
+            DeleteObject(hPen);
+            SelectObject(hdc, oldBrush);
+        }
         ut.DrawCircle(hdc, _pos, 50);
     };
     int smt(int n, int* dat) {  // smt는 디코로 다시 설명 함

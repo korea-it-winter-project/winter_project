@@ -1,6 +1,7 @@
 #pragma once
-//#include "pch.h"
+#include "pch.h"
 class Object;
+//#include "object.h"
 
 class Collider {
 public:
@@ -11,8 +12,13 @@ public:
     virtual void ResolveCollision(Collider* other) = 0;
 
     Object* GetOwner() const { return _owner; }
+    void Render(HDC hdc) {
+        
+    }
+    Vector _size;
 
 protected:
     Object* _owner;
+
 };
 

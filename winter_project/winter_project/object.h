@@ -34,7 +34,17 @@ public:
 
     };
     virtual void Render(HDC hdc) {
-
+        if (_collider) {
+            HPEN hPen = CreatePen(PS_SOLID, 1, RGB(255, 0, 0)); // 빨간색 테두리
+            HGDIOBJ oldPen = SelectObject(hdc, hPen);
+            HBRUSH hBrush = (HBRUSH)GetStockObject(HOLLOW_BRUSH); // 내부 비우기
+            HGDIOBJ oldBrush = SelectObject(hdc, hBrush);
+            Rectangle(hdc, _pos.x - _collider->_size.x, _pos.y - _collider->_size.y,
+                _pos.x + _collider->_size.x, _pos.y + _collider->_size.y);
+            SelectObject(hdc, oldPen);
+            DeleteObject(hPen);
+            SelectObject(hdc, oldBrush);
+        }
     };
 
     // 오브젝트 타입 반환
@@ -49,6 +59,8 @@ public:
     void SetSize(Vector size) { _size = size; }
 
     void SetBmp(std::shared_ptr<Gdiplus::Bitmap> _pBmp) { pBmp = _pBmp; }
+    std::shared_ptr<Gdiplus::Bitmap> GetBmp() { return pBmp; }
+
 
     // 체력 관련 함수
     void TakeDamage(UINT32 dmg) {
@@ -67,7 +79,13 @@ public:
     virtual void OnCollision(Collider* other) {
 
     }
+    HBITMAP ConvertToHBITMAP(std::shared_ptr<Gdiplus::Bitmap> gdiBitmap, COLORREF background = RGB(255, 255, 255)) {
+        if (!gdiBitmap) return nullptr;
 
+        HBITMAP hBitmap = nullptr;
+        gdiBitmap->GetHBITMAP(background, &hBitmap); // GDI+ Bitmap을 HBITMAP으로 변환
+        return hBitmap;
+    }
 protected:
     ObjectType _type = ObjectType::None; // 오브젝트 타입
     Stat _stat = {};                     // 스탯 정보

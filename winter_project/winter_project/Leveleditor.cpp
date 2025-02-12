@@ -65,13 +65,21 @@ void Leveleditor::Update() {
             int tileY = pt.y / TILE_SIZE;
             if (GET_SINGLE(MapData)->GetTile(tileX, tileY)) return;
             GET_SINGLE(MapData)->SetTile(tileX, tileY, selectedTile);
-            printf("%d", GET_SINGLE(MapData)->GetTile(tileX, tileY));
+            if (GET_SINGLE(MapData)->GetTile(tileX, tileY)==0) return;
 
-            Tile* _tile = GET_SINGLE(ObjectManager)->CreateObject<Tile>();
-            _tile->SetPos(Vector{ (float)tileX,(float)tileY });
-            _tile->SetSize(Vector{ 24.f, 24.f });
-            //_tile->SetBmp(pBmp);
-            GET_SINGLE(ObjectManager)->Add(_tile);
+            
+                printf("%d", GET_SINGLE(MapData)->GetTile(tileX, tileY));
+                Tile* _tile = GET_SINGLE(ObjectManager)->CreateObject<Tile>();
+                _tile->SetPos(Vector{ (float)tileX,(float)tileY });
+                _tile->SetSize(Vector{ TILE_SIZE, TILE_SIZE });
+                //_tile->SetBmp(pBmp);
+                switch (GET_SINGLE(MapData)->GetTile(tileX, tileY)) { 
+                case -9: _tile->SetBaseName(L"dirt_"); break;  // Èë(º®)
+                case 2: _tile->SetBaseName(L"stone_"); break; // µ¹(±æ)
+                default: break;
+                }
+                GET_SINGLE(ObjectManager)->Add(_tile);
+            
         }
     }
     switch (GET_SINGLE(ToolUi)->GetNum()) {

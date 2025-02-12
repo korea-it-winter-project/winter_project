@@ -20,14 +20,14 @@ public :
 			player->SetPos(Vector{ 400,400 });
 			player->SetSize(Vector{ 25,25 });
 			GET_SINGLE(ObjectManager)->Add(player);
-			player->SetCollider(new BoxCollider(player, player->GetSize()));
+			player->SetCollider(new BoxCollider(player, Vector{ player->GetSize().x+5,player->GetSize().y+5 }));
 		}
 		{
 			Monster* monster = GET_SINGLE(ObjectManager)->CreateObject<Monster>();
 			monster->SetPos(Vector{ 200,400 });
 			monster->SetSize(Vector{ 25,25 });
 			GET_SINGLE(ObjectManager)->Add(monster);
-			monster->SetCollider(new BoxCollider(monster, monster->GetSize()));
+			monster->SetCollider(new BoxCollider(monster, monster->GetSize()+5));
 		}
 	};
 	virtual void Update()override {
