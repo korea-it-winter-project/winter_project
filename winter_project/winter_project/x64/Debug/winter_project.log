@@ -1,15 +1,15 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output 디렉터리가 슬래시로 끝나지 않습니다. Output 디렉터리의 적절한 평가를 허용하는 데 필요하므로 이 빌드 인스턴스에서 슬래시를 추가합니다.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output 디렉터리가 슬래시로 끝나지 않습니다. Output 디렉터리의 적절한 평가를 허용하는 데 필요하므로 이 빌드 인스턴스에서 슬래시를 추가합니다.
   pch.cpp
-E:\CPP\git_clone\winter_project\winter_project\winter_project\object.h(43,53): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\object.h(44,53): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
-E:\CPP\git_clone\winter_project\winter_project\winter_project\object.h(43,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\object.h(44,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
-E:\CPP\git_clone\winter_project\winter_project\winter_project\object.h(42,64): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\object.h(43,64): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
-E:\CPP\git_clone\winter_project\winter_project\winter_project\object.h(42,35): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\object.h(43,35): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
 E:\CPP\git_clone\winter_project\winter_project\winter_project\Player.h(45,41): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
@@ -36,23 +36,107 @@ E:\CPP\git_clone\winter_project\winter_project\winter_project\monster.h(33,64): 
 E:\CPP\git_clone\winter_project\winter_project\winter_project\monster.h(33,35): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
-E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(27,69): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\ResourceManager.h(13,14): warning C4091: 'static ': 변수를 선언하지 않으면 'ResourceManager' 왼쪽은 무시됩니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
-E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(27,61): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(11,14): warning C4091: 'static ': 변수를 선언하지 않으면 'Tile' 왼쪽은 무시됩니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
-E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(45,44): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(26,79): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
-E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(45,25): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(26,71): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
-E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(91,12): warning C4244: '-=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(58,56): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(58,36): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(62,60): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\Tile.h(62,40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UIobject.h(10,14): warning C4091: 'static ': 변수를 선언하지 않으면 'UiObject' 왼쪽은 무시됩니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UIobject.h(49,24): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UIobject.h(50,25): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UIobject.h(68,43): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UIobject.h(68,36): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UIobject.h(67,59): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UIobject.h(67,50): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UIobject.h(67,41): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UIobject.h(67,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(125,108): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(125,82): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(129,88): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(129,73): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(134,100): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(134,78): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(141,100): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(141,78): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(145,100): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(145,78): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(149,101): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(149,79): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(154,82): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(154,67): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
   DevScene.cpp
   Game.cpp
+E:\CPP\git_clone\winter_project\winter_project\winter_project\Game.cpp(98,81): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\Game.cpp(98,74): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
+  
   GameScene.cpp
   InputManager.cpp
   Leveleditor.cpp
@@ -60,6 +144,24 @@ E:\CPP\git_clone\winter_project\winter_project\winter_project\UiScene.h(91,12): 
   ResourceManager.cpp
   Scene.cpp
   StartScene.cpp
+E:\CPP\git_clone\winter_project\winter_project\winter_project\StartScene.cpp(76,88): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/StartScene.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\StartScene.cpp(76,72): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/StartScene.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\StartScene.cpp(79,94): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/StartScene.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\StartScene.cpp(79,76): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/StartScene.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\StartScene.cpp(83,85): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/StartScene.cpp'을(를) 컴파일하는 중)
+  
+E:\CPP\git_clone\winter_project\winter_project\winter_project\StartScene.cpp(83,70): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/StartScene.cpp'을(를) 컴파일하는 중)
+  
   Tile.cpp
   TimeManager.cpp
   main.cpp

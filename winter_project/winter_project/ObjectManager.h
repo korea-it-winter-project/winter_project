@@ -39,7 +39,8 @@ public:
         for (auto* obj : _objects) {
             delete obj;
         }
-        //_objects.clear();
+        objcount = 0;
+        _objects.clear();
     }
 
     const std::vector<Object*>& GetObjects() const {

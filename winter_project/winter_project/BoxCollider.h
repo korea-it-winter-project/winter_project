@@ -12,7 +12,7 @@ public:
         Vector posA = _owner->GetPos();
         Vector sizeA = _size;
         Vector minA = { posA.x - sizeA.x, posA.y - sizeA.x };                      // AABB ÃÖ¼Ò ÁÂÇ¥ (ÁÂ»ó´Ü)
-        Vector maxA = { posA.x + sizeA.x, posA.y + sizeA.y };  // AABB ÃÖ´ë ÁÂÇ¥ (¿ìÇÏ´Ü)
+        Vector maxA = { posA.x + sizeA.x, posA.y + sizeA.y };
 
         Vector posB = box->_owner->GetPos();
         Vector sizeB = box->_size;

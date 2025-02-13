@@ -14,6 +14,8 @@ public:
 	void Update();
 	void Render();
 	void SceneSzieCH(HWND hwnd);
+	float Gtime;
+	float deltaTime;
 private:
 	HWND _hwnd = {};
 	HDC _hdc = {};

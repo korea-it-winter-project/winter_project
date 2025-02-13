@@ -18,12 +18,15 @@ public:
     void Clear( int value = 0 ) {
         for ( int y = 0; y < MAP_ROWS; ++y )
         {
-            for ( int x = 0; x < MAP_COLS; ++x )
+            for ( int x = 0; x < MAP_ROWS; ++x )
             {
                 _map[ y ][ x ] = value;
                 _autoTileIndices[ y ][ x ] = -1;
             }
         }
+
+        GET_SINGLE(ObjectManager)->clear();
+        
     };
 
     // 맵 범위 체크 후 타일 값 설정 및 인접 타일의 오토 인덱스 재계산
@@ -147,9 +150,9 @@ private:
         bool leftEmpty = !( mask & ( 1 << 3 ) );
 
         // 디버그 출력
-        std::cout << "[x=" << x << ",y=" << y
+        /*std::cout << "[x=" << x << ",y=" << y
             << "] upE=" << upEmpty << " rightE=" << rightEmpty
-            << " downE=" << downEmpty << " leftE=" << leftEmpty << std::endl;
+            << " downE=" << downEmpty << " leftE=" << leftEmpty << std::endl;*/
 
         int autoIndex = 0;
         // 아래만 비어있는 경우 → 원래 0~2 범위 중 랜덤 선택

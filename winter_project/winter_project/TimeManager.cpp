@@ -27,3 +27,4 @@ void TimeManager::Update()
 		_frameCount = 0;
 	}
 }
+

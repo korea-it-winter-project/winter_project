@@ -132,6 +132,9 @@
     <ClInclude Include="UiScene.h">
       <Filter>소스 파일\04.scene</Filter>
     </ClInclude>
+    <ClInclude Include="UIobject.h">
+      <Filter>소스 파일\05.object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

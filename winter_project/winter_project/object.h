@@ -21,6 +21,7 @@ enum class ObjectType {
     Projectile,
     Block,
     Tower,
+    Ui
 };
 
 

@@ -6,63 +6,74 @@
 #include "ToolUi.h"
 //#include "glew.h"
 
-class Tile:public Object
-{
+#include <unordered_map>
 
+static class Tile : public Object {
 public:
-	Tile() :Object( ObjectType::Block ){
-		
-	};
-	virtual ~Tile() {
+    Tile() : Object(ObjectType::Block), hBitmap(nullptr), width(0), height(0) {}
 
-	};
-	void SetBaseName(std::wstring _baseName) { baseName = _baseName; }
+    virtual ~Tile() {
+        if (hBitmap) DeleteObject(hBitmap);
+    }
 
+    void SetBaseName(std::wstring _baseName) {
+        baseName = _baseName;
+    }
 
-	virtual void Init() override {
-		
-	};
-	virtual void Update() override {
-		
-		int autoIndex = GET_SINGLE(MapData)->GetAutoTileIndex(_pos.x, _pos.y);
-		std::wstring fullFileName = baseName + std::to_wstring(autoIndex) + L".png";
+    virtual void Update() override {
+        //if (time > 0.5f) {
+            time = 0;
+            int autoIndex = GET_SINGLE(MapData)->GetAutoTileIndex(_pos.x, _pos.y);
+            std::wstring fullFileName = baseName + std::to_wstring(autoIndex) + L".png";
 
-		pBmp = GET_SINGLE(ResourceManager)->FindImage(fullFileName);
-	};
-	virtual void Render( HDC hdc ) {
-		HDC memDC = CreateCompatibleDC(hdc);
-		HBITMAP hBitmap = ConvertToHBITMAP(GetBmp());
+            if (hBitmapCache.find(fullFileName) == hBitmapCache.end()) {
+                HBITMAP newBitmap = ConvertToHBITMAP(GET_SINGLE(ResourceManager)->FindImage(fullFileName));
+                hBitmapCache[fullFileName] = newBitmap;
+            }
 
-		//if (!hBitmap) return; // 변환 실패 시 렌더링 중단
+            hBitmap = hBitmapCache[fullFileName];
 
-		HBITMAP oldBitmap = (HBITMAP)SelectObject(memDC, hBitmap);
-		BITMAP bmp;
+            if (hBitmap) {
+                BITMAP bmp;
+                GetObject(hBitmap, sizeof(BITMAP), &bmp);
+                width = bmp.bmWidth;
+                height = bmp.bmHeight;
+            }
+        //}
+        //time += GET_SINGLE(TimeManager)->GetDeltaTime();
+    }
 
-		GetObject(hBitmap, sizeof(BITMAP), &bmp);  // HBITMAP 크기 가져오기
-		int width = bmp.bmWidth;
-		int height = bmp.bmHeight;
-		// BitBlt의 크기 오류 수정
-		StretchBlt(hdc, _pos.x* TILE_SIZE, _pos.y* TILE_SIZE, TILE_SIZE, TILE_SIZE,
-			memDC, 0, 0, width, height, SRCCOPY);
+    virtual void Render(HDC hdc) override {
+        if (!hBitmap) return;
 
-		// 원래 비트맵으로 복원 후 삭제
-		SelectObject(memDC, oldBitmap);
-		DeleteObject(hBitmap);
-		DeleteDC(memDC);
-		
-		
-		//Gdiplus::Graphics graphics(hdc);
-		/*if (pBmp) {
-			graphics.DrawImage(pBmp.get(),
-				static_cast<int>(_pos.x * (int)_size.x),
-				static_cast<int>(_pos.y * (int)_size.x),
-				static_cast<int>(_rect.left + (int)_size.x),
-				static_cast<int>(_rect.top + (int)_size.x));
-		}*/
-	};
+        if (!sharedMemDC) {
+            sharedMemDC = CreateCompatibleDC(hdc);
+        }
+
+        HBITMAP oldBitmap = (HBITMAP)SelectObject(sharedMemDC, hBitmap);
+
+  
+            if (width == TILE_SIZE && height == TILE_SIZE) {
+                // 크기가 같다면 BitBlt 사용 (더 빠름)
+                BitBlt(hdc, _pos.x * TILE_SIZE, _pos.y * TILE_SIZE, TILE_SIZE, TILE_SIZE, sharedMemDC, 0, 0, SRCCOPY);
+            }
+            else {
+                // 크기가 다르면 StretchBlt 사용
+                StretchBlt(hdc, _pos.x * TILE_SIZE, _pos.y * TILE_SIZE, TILE_SIZE, TILE_SIZE,
+                    sharedMemDC, 0, 0, width, height, SRCCOPY);
+            }
+        
+
+        SelectObject(sharedMemDC, oldBitmap);
+    }
 
 private:
-	std::wstring baseName = L"";
-	RECT _rect;
+    std::wstring baseName;
+    HBITMAP hBitmap;
+    int width, height;
+    HDC sharedMemDC;  // 모든 Tile이 공유하는 DC
+    std::unordered_map<std::wstring, HBITMAP> hBitmapCache;  // 비트맵 캐싱
+    float time;
 };
+
 

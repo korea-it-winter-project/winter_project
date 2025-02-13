@@ -10,7 +10,7 @@
 #include <algorithm>
 #include <memory>  // 스마트 포인터 사용을 위한 헤더
 
-class ResourceManager
+static class ResourceManager
 {
     DECLARE_SINGLE( ResourceManager );
 
@@ -21,7 +21,13 @@ public:
         // _imageMap은 _tileImages와 같은 포인터를 관리하므로 별도 해제가 필요 없음.
         _imageMap.clear();
     }
+    HBITMAP ConvertToHBITMAP(std::shared_ptr<Gdiplus::Bitmap> gdiBitmap, COLORREF background = RGB(255, 255, 255)) {
+        if (!gdiBitmap) return nullptr;
 
+        HBITMAP hBitmap = nullptr;
+        gdiBitmap->GetHBITMAP(background, &hBitmap); // GDI+ Bitmap을 HBITMAP으로 변환
+        return hBitmap;
+    }
     // 폴더 내의 이미지를 로드하여 카테고리별 및 파일이름별로 저장합니다.
     void LoadImagesIntoManager( const std::wstring& folderPath )
     {
@@ -59,6 +65,11 @@ public:
                         _tileImages[ L"dirt" ].push_back( pBitmap );
                         std::wcout << L"Loaded Dirt: " << filename << std::endl;
                     }
+                    else if (filename.find(L"uiicon_") != std::wstring::npos)
+                    {
+                        _tileImages[L"uiicon"].push_back(pBitmap);
+                        std::wcout << L"Loaded Uiicon: " << filename << std::endl;
+                    }
                     else
                     {
                         // 기본 카테고리 (예: "default")에 저장
@@ -93,6 +104,30 @@ public:
             return nullptr;
         return it->second;
     }
+    void DrawImage2(HDC hdc, std::shared_ptr<Gdiplus::Bitmap> pImage, float x, float y, float width, float height) {
+        HBITMAP hBitmap = ConvertToHBITMAP(pImage);
+
+        // HBITMAP을 그리기 위한 DC 생성
+        HDC mecDC = CreateCompatibleDC(hdc); // 현재 DC와 호환되는 메모리 DC를 생성합니다.
+
+        // HBITMAP을 메모리 DC에 선택
+        HBITMAP oldBitmap = (HBITMAP)SelectObject(mecDC, hBitmap);
+
+        // 이미지를 메모리 DC에서 해당 좌표에 그리기
+        //BitBlt(hdc, (int)x, (int)y, (int)width, (int)height, mecDC, 0, 0, SRCCOPY);
+        StretchBlt(hdc, (int)x, (int)y, (int)width, (int)height,
+            mecDC, 0, 0, pImage->GetWidth() , pImage->GetHeight(), SRCCOPY);
+
+        // 리소스 정리
+        SelectObject(mecDC, oldBitmap);
+        DeleteDC(mecDC);
+        DeleteObject(hBitmap);
+    }
+
+    void DrawImage(Gdiplus::Graphics& g, std::shared_ptr<Gdiplus::Bitmap> pImage, float x, float y, float width, float height)
+    {
+        g.DrawImage(pImage.get(), x, y, width, height);
+    }
 
     void DrawRotatedImage(Gdiplus::Graphics& g, std::shared_ptr<Gdiplus::Bitmap> pImage, float x, float y, float angle)
     {
@@ -118,7 +153,7 @@ public:
         g.DrawImage(pImage.get(), x, y, width, height);
         g.ResetTransform();
     }
-
+    
     void DrawImageWithAlpha(Gdiplus::Graphics& g, std::shared_ptr<Gdiplus::Bitmap> pImage,
         float x, float y, float width, float height, float alpha)
     {

@@ -196,6 +196,7 @@
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TimeManager.h" />
     <ClInclude Include="ToolUi.h" />
+    <ClInclude Include="UIobject.h" />
     <ClInclude Include="UiScene.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="Vector.h" />

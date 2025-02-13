@@ -9,14 +9,14 @@ public:
     virtual ~Collider() {}
 
     virtual bool CheckCollision(Collider* other) = 0;
-    virtual void ResolveCollision(Collider* other) = 0;
+    virtual void ResolveCollision(Collider* other) = 0; 
 
     Object* GetOwner() const { return _owner; }
     void Render(HDC hdc) {
         
     }
     Vector _size;
-
+     
 protected:
     Object* _owner;
 

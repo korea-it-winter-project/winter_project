@@ -23,6 +23,29 @@ Leveleditor::~Leveleditor() {
      isMapEdit_ = false;
     // MapData를 통해 파일에서 맵 데이터를 로드
     GET_SINGLE( MapData )->LoadFromFileText( "map.csv" );
+    for (int y = 0; y < MAP_ROWS; ++y)
+    {
+        for (int x = 0; x < MAP_COLS; ++x)
+        {
+            // CSV에서 읽은 타일 값
+            int tileValue = GET_SINGLE(MapData)->GetTile(x, y);
+            //if (tileValue != -9)
+            {
+                // ObjectManager를 통해 Tile 객체 생성
+                Tile* tile = GET_SINGLE(ObjectManager)->CreateObject<Tile>();
+                // 타일의 위치는 그리드 좌표이며, 실제 픽셀 좌표는 TILE_SIZE를 곱해 계산
+                tile->SetPos(Vector{ static_cast<float>(x), static_cast<float>(y) });
+                tile->SetSize(Vector{ static_cast<float>(TILE_SIZE), static_cast<float>(TILE_SIZE) });
+                switch (GET_SINGLE(MapData)->GetTile(x, y)) {
+                case -9: tile->SetBaseName(L"dirt_"); break;  // 흙(벽)
+                case 2: tile->SetBaseName(L"stone_"); break; // 돌(길)
+                default: break;
+                }
+                GET_SINGLE(ObjectManager)->Add(tile);
+                // Tile::Update()에서 MapData를 참조하여 auto tile index 등을 계산
+            }
+        }
+    }
 }
 
 void Leveleditor::Update() {
