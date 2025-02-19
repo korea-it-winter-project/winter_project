@@ -5,6 +5,7 @@
 #include "ResourceManager.h"
 #include "ObjectManager.h"
 #include "UIobject.h"
+#include "TextOjbect.h"
 #include "Scene.h"
 
 class UiScene :public Scene{
@@ -40,7 +41,7 @@ public:
 	UiScene() {};
 	virtual ~UiScene() override {};
 
-	void UIcreate(std::shared_ptr<Gdiplus::Bitmap> bmp, Vector pos, Vector size,bool A) {
+	UiObject* UIcreate(std::shared_ptr<Gdiplus::Bitmap> bmp, Vector pos, Vector size,bool A) {
 		UiObject* UIobj = GET_SINGLE(ObjectManager)->CreateObject<UiObject>();
 		UIobj->SetPos(pos);
 		UIobj->SetSize(size);
@@ -48,6 +49,7 @@ public:
 		UIobj->SetBmp(bmp);
 		UIobj->isA = A;
 		GET_SINGLE(ObjectManager)->Add(UIobj);
+		return UIobj;
 	}
 	virtual void Init() override {
 		coin = 0;
@@ -71,6 +73,17 @@ public:
 		UIcreate(MainBackGroundIma, Vector{ 0,0 }, Vector{ 1000,600 },false);
 		UIcreate(UiBackGroundIma, Vector{ 0,535.f }, Vector{ 1000.0f, 65.0f },false);
 		UIcreate(ShopButtonIma, Vector{ 805,540.f }, Vector{ 195.f, 50.0f },true);
+
+		coinRect = { 50,50,100,100 };
+
+		TextObject* text1 = GET_SINGLE(ObjectManager)->CreateObject<TextObject>();	
+		text1->SetRECT(coinRect);
+		text1->showText(L"", coin);
+		GET_SINGLE(ObjectManager)->Add(text1);
+
+
+
+
 
 
 		/*UiObject* UIbackGround = GET_SINGLE(ObjectManager)->CreateObject<UiObject>();

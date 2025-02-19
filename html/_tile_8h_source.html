@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Tile.h ÏÜåÏä§ ÌååÏùº</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Í≤ÄÏÉâ" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Îã§ÏùåÏóê ÏùòÌï¥ ÏÉùÏÑ±Îê® :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_tile_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Î°úÎî©Ï§ë...</div>
+<div class="SRStatus" id="Searching">Í≤ÄÏÉâÏ§ë...</div>
+<div class="SRStatus" id="NoMatches">ÏùºÏπòÌïòÎäîÍ≤É ÏóÜÏùå</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Tile.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_tile_8h.html">Ïù¥ ÌååÏùºÏùò Î¨∏ÏÑúÌôî ÌéòÏù¥ÏßÄÎ°ú Í∞ÄÍ∏∞</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="object_8h.html">object.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_leveleditor_8h.html">Leveleditor.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;fstream&gt;</span> <span class="comment">// ofstream, ifstream µÓ</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_resource_manager_8h.html">ResourceManager.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_tool_ui_8h.html">ToolUi.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//#include &quot;glew.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_tile.html">   11</a></span><span class="keyword">static</span> <span class="keyword">class </span><a class="code hl_function" href="class_tile.html#aeeb5593bb6b75aae2edfcccbc84ab378">Tile</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_object.html#ae9a2d05bd1213cd54c16937e159b9692">Object</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_tile.html#aeeb5593bb6b75aae2edfcccbc84ab378">   13</a></span>    <a class="code hl_function" href="class_tile.html#aeeb5593bb6b75aae2edfcccbc84ab378">Tile</a>() : <a class="code hl_function" href="class_object.html#ae9a2d05bd1213cd54c16937e159b9692">Object</a>(<a class="code hl_enumeration" href="object_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a>::<a class="code hl_enumvalue" href="object_8h.html#a842c5e2e69277690b064bf363c017980ae1e4c8c9ccd9fc39c391da4bcd093fb2">Block</a>), <a class="code hl_variable" href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">hBitmap</a>(nullptr), <a class="code hl_variable" href="class_tile.html#adbb086e3041864b3079bd5088dc571fb">width</a>(0), <a class="code hl_variable" href="class_tile.html#a1ceee2a6a986af91980d62c039ffe792">height</a>(0) {}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_tile.html#ab14649d81ec931b73e9e391c3b252ef0">   15</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_tile.html#ab14649d81ec931b73e9e391c3b252ef0">~Tile</a>() {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">hBitmap</a>) DeleteObject(<a class="code hl_variable" href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">hBitmap</a>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_tile.html#aebc48861c185a3308d5be39887f9d56f">   19</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_tile.html#aebc48861c185a3308d5be39887f9d56f">SetBaseName</a>(std::wstring _baseName) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_variable" href="class_tile.html#a00d9df0f6a05961f3aa916a48bed32f7">baseName</a> = _baseName;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_tile.html#a63a831c8803e7b2610d8ff3630e13673">   23</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_tile.html#a63a831c8803e7b2610d8ff3630e13673">Update</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">//if (time &gt; 0.5f) {</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <a class="code hl_variable" href="class_tile.html#a39a420265d7d29935a96749df3164549">time</a> = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordtype">int</span> autoIndex = <a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_map_data.html">MapData</a>)-&gt;GetAutoTileIndex(<a class="code hl_variable" href="class_object.html#a3fa062faeea52d00fb1b2cc0f2b48567">_pos</a>.x, <a class="code hl_variable" href="class_object.html#a3fa062faeea52d00fb1b2cc0f2b48567">_pos</a>.y);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            std::wstring fullFileName = <a class="code hl_variable" href="class_tile.html#a00d9df0f6a05961f3aa916a48bed32f7">baseName</a> + std::to_wstring(autoIndex) + L<span class="stringliteral">&quot;.png&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_tile.html#a8a7422c6972deedb33065105091dd8c1">hBitmapCache</a>.find(fullFileName) == <a class="code hl_variable" href="class_tile.html#a8a7422c6972deedb33065105091dd8c1">hBitmapCache</a>.end()) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                HBITMAP newBitmap = <a class="code hl_function" href="class_object.html#ad64461cd808fbf66d220b0bc34c2fe59">ConvertToHBITMAP</a>(<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_resource_manager.html">ResourceManager</a>)-&gt;FindImage(fullFileName));</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                <a class="code hl_variable" href="class_tile.html#a8a7422c6972deedb33065105091dd8c1">hBitmapCache</a>[fullFileName] = newBitmap;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_variable" href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">hBitmap</a> = <a class="code hl_variable" href="class_tile.html#a8a7422c6972deedb33065105091dd8c1">hBitmapCache</a>[fullFileName];</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">hBitmap</a>) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                BITMAP bmp;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                GetObject(<a class="code hl_variable" href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">hBitmap</a>, <span class="keyword">sizeof</span>(BITMAP), &amp;bmp);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <a class="code hl_variable" href="class_tile.html#adbb086e3041864b3079bd5088dc571fb">width</a> = bmp.bmWidth;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <a class="code hl_variable" href="class_tile.html#a1ceee2a6a986af91980d62c039ffe792">height</a> = bmp.bmHeight;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="comment">//}</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">//time += GET_SINGLE(TimeManager)-&gt;GetDeltaTime();</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_tile.html#a303069af2a54516dcc8b239f9478aaec">   46</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_tile.html#a303069af2a54516dcc8b239f9478aaec">Render</a>(HDC hdc)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">hBitmap</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_tile.html#af1be4ddce24e3060a7cf60bc3a03cdb4">sharedMemDC</a>) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_variable" href="class_tile.html#af1be4ddce24e3060a7cf60bc3a03cdb4">sharedMemDC</a> = CreateCompatibleDC(hdc);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        HBITMAP oldBitmap = (HBITMAP)SelectObject(<a class="code hl_variable" href="class_tile.html#af1be4ddce24e3060a7cf60bc3a03cdb4">sharedMemDC</a>, <a class="code hl_variable" href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">hBitmap</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_tile.html#adbb086e3041864b3079bd5088dc571fb">width</a> == <a class="code hl_variable" href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a> &amp;&amp; <a class="code hl_variable" href="class_tile.html#a1ceee2a6a986af91980d62c039ffe792">height</a> == <a class="code hl_variable" href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a>) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <span class="comment">// ≈©±‚∞° ∞∞¥Ÿ∏È BitBlt ªÁøÎ (¥ı ∫¸∏ß)</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                BitBlt(hdc, <a class="code hl_variable" href="class_object.html#a3fa062faeea52d00fb1b2cc0f2b48567">_pos</a>.x * <a class="code hl_variable" href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a>, <a class="code hl_variable" href="class_object.html#a3fa062faeea52d00fb1b2cc0f2b48567">_pos</a>.y * <a class="code hl_variable" href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a>, <a class="code hl_variable" href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a>, <a class="code hl_variable" href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a>, <a class="code hl_variable" href="class_tile.html#af1be4ddce24e3060a7cf60bc3a03cdb4">sharedMemDC</a>, 0, 0, SRCCOPY);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="comment">// ≈©±‚∞° ¥Ÿ∏£∏È StretchBlt ªÁøÎ</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                StretchBlt(hdc, <a class="code hl_variable" href="class_object.html#a3fa062faeea52d00fb1b2cc0f2b48567">_pos</a>.x * <a class="code hl_variable" href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a>, <a class="code hl_variable" href="class_object.html#a3fa062faeea52d00fb1b2cc0f2b48567">_pos</a>.y * <a class="code hl_variable" href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a>, <a class="code hl_variable" href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a>, <a class="code hl_variable" href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a>,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    <a class="code hl_variable" href="class_tile.html#af1be4ddce24e3060a7cf60bc3a03cdb4">sharedMemDC</a>, 0, 0, <a class="code hl_variable" href="class_tile.html#adbb086e3041864b3079bd5088dc571fb">width</a>, <a class="code hl_variable" href="class_tile.html#a1ceee2a6a986af91980d62c039ffe792">height</a>, SRCCOPY);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        SelectObject(<a class="code hl_variable" href="class_tile.html#af1be4ddce24e3060a7cf60bc3a03cdb4">sharedMemDC</a>, oldBitmap);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_tile.html#a00d9df0f6a05961f3aa916a48bed32f7">   71</a></span>    std::wstring <a class="code hl_variable" href="class_tile.html#a00d9df0f6a05961f3aa916a48bed32f7">baseName</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">   72</a></span>    HBITMAP <a class="code hl_variable" href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">hBitmap</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_tile.html#a1ceee2a6a986af91980d62c039ffe792">   73</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_tile.html#adbb086e3041864b3079bd5088dc571fb">width</a>, <a class="code hl_variable" href="class_tile.html#a1ceee2a6a986af91980d62c039ffe792">height</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_tile.html#af1be4ddce24e3060a7cf60bc3a03cdb4">   74</a></span>    HDC <a class="code hl_variable" href="class_tile.html#af1be4ddce24e3060a7cf60bc3a03cdb4">sharedMemDC</a>;  <span class="comment">// ∏µÁ Tile¿Ã ∞¯¿Ø«œ¥¬ DC</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_tile.html#a8a7422c6972deedb33065105091dd8c1">   75</a></span>    std::unordered_map&lt;std::wstring, HBITMAP&gt; <a class="code hl_variable" href="class_tile.html#a8a7422c6972deedb33065105091dd8c1">hBitmapCache</a>;  <span class="comment">// ∫Ò∆Æ∏  ƒ≥ΩÃ</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_tile.html#a39a420265d7d29935a96749df3164549">   76</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_tile.html#a39a420265d7d29935a96749df3164549">time</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="ttc" id="a_leveleditor_8h_html"><div class="ttname"><a href="_leveleditor_8h.html">Leveleditor.h</a></div></div>
+<div class="ttc" id="a_map_data_8h_html_a8adcd57e318ecb77a2ffe6ec188f005b"><div class="ttname"><a href="_map_data_8h.html#a8adcd57e318ecb77a2ffe6ec188f005b">TILE_SIZE</a></div><div class="ttdeci">static const int TILE_SIZE</div><div class="ttdoc">∏  ∞¸∑√ ∞Ì¡§ ªÛºˆ</div><div class="ttdef"><b>Definition</b> <a href="_map_data_8h_source.html#l00008">MapData.h:8</a></div></div>
+<div class="ttc" id="a_resource_manager_8h_html"><div class="ttname"><a href="_resource_manager_8h.html">ResourceManager.h</a></div></div>
+<div class="ttc" id="a_tool_ui_8h_html"><div class="ttname"><a href="_tool_ui_8h.html">ToolUi.h</a></div></div>
+<div class="ttc" id="aclass_map_data_html"><div class="ttname"><a href="class_map_data.html">MapData</a></div><div class="ttdef"><b>Definition</b> <a href="_map_data_8h_source.html#l00013">MapData.h:14</a></div></div>
+<div class="ttc" id="aclass_object_html_a3fa062faeea52d00fb1b2cc0f2b48567"><div class="ttname"><a href="class_object.html#a3fa062faeea52d00fb1b2cc0f2b48567">Object::_pos</a></div><div class="ttdeci">Vector _pos</div><div class="ttdef"><b>Definition</b> <a href="object_8h_source.html#l00093">object.h:93</a></div></div>
+<div class="ttc" id="aclass_object_html_ad64461cd808fbf66d220b0bc34c2fe59"><div class="ttname"><a href="class_object.html#ad64461cd808fbf66d220b0bc34c2fe59">Object::ConvertToHBITMAP</a></div><div class="ttdeci">HBITMAP ConvertToHBITMAP(std::shared_ptr&lt; Gdiplus::Bitmap &gt; gdiBitmap, COLORREF background=RGB(255, 255, 255))</div><div class="ttdef"><b>Definition</b> <a href="object_8h_source.html#l00083">object.h:83</a></div></div>
+<div class="ttc" id="aclass_object_html_ae9a2d05bd1213cd54c16937e159b9692"><div class="ttname"><a href="class_object.html#ae9a2d05bd1213cd54c16937e159b9692">Object::Object</a></div><div class="ttdeci">Object(ObjectType objType)</div><div class="ttdef"><b>Definition</b> <a href="object_8h_source.html#l00030">object.h:30</a></div></div>
+<div class="ttc" id="aclass_resource_manager_html"><div class="ttname"><a href="class_resource_manager.html">ResourceManager</a></div><div class="ttdef"><b>Definition</b> <a href="_resource_manager_8h_source.html#l00013">ResourceManager.h:14</a></div></div>
+<div class="ttc" id="aclass_tile_html_a00d9df0f6a05961f3aa916a48bed32f7"><div class="ttname"><a href="class_tile.html#a00d9df0f6a05961f3aa916a48bed32f7">Tile::baseName</a></div><div class="ttdeci">std::wstring baseName</div><div class="ttdef"><b>Definition</b> <a href="#l00071">Tile.h:71</a></div></div>
+<div class="ttc" id="aclass_tile_html_a1ceee2a6a986af91980d62c039ffe792"><div class="ttname"><a href="class_tile.html#a1ceee2a6a986af91980d62c039ffe792">Tile::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> <a href="#l00073">Tile.h:73</a></div></div>
+<div class="ttc" id="aclass_tile_html_a303069af2a54516dcc8b239f9478aaec"><div class="ttname"><a href="class_tile.html#a303069af2a54516dcc8b239f9478aaec">Tile::Render</a></div><div class="ttdeci">virtual void Render(HDC hdc) override</div><div class="ttdef"><b>Definition</b> <a href="#l00046">Tile.h:46</a></div></div>
+<div class="ttc" id="aclass_tile_html_a39a420265d7d29935a96749df3164549"><div class="ttname"><a href="class_tile.html#a39a420265d7d29935a96749df3164549">Tile::time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition</b> <a href="#l00076">Tile.h:76</a></div></div>
+<div class="ttc" id="aclass_tile_html_a63a831c8803e7b2610d8ff3630e13673"><div class="ttname"><a href="class_tile.html#a63a831c8803e7b2610d8ff3630e13673">Tile::Update</a></div><div class="ttdeci">virtual void Update() override</div><div class="ttdef"><b>Definition</b> <a href="#l00023">Tile.h:23</a></div></div>
+<div class="ttc" id="aclass_tile_html_a6ac2865f08703d124147f77c7a46a1c8"><div class="ttname"><a href="class_tile.html#a6ac2865f08703d124147f77c7a46a1c8">Tile::hBitmap</a></div><div class="ttdeci">HBITMAP hBitmap</div><div class="ttdef"><b>Definition</b> <a href="#l00072">Tile.h:72</a></div></div>
+<div class="ttc" id="aclass_tile_html_a8a7422c6972deedb33065105091dd8c1"><div class="ttname"><a href="class_tile.html#a8a7422c6972deedb33065105091dd8c1">Tile::hBitmapCache</a></div><div class="ttdeci">std::unordered_map&lt; std::wstring, HBITMAP &gt; hBitmapCache</div><div class="ttdef"><b>Definition</b> <a href="#l00075">Tile.h:75</a></div></div>
+<div class="ttc" id="aclass_tile_html_ab14649d81ec931b73e9e391c3b252ef0"><div class="ttname"><a href="class_tile.html#ab14649d81ec931b73e9e391c3b252ef0">Tile::~Tile</a></div><div class="ttdeci">virtual ~Tile()</div><div class="ttdef"><b>Definition</b> <a href="#l00015">Tile.h:15</a></div></div>
+<div class="ttc" id="aclass_tile_html_adbb086e3041864b3079bd5088dc571fb"><div class="ttname"><a href="class_tile.html#adbb086e3041864b3079bd5088dc571fb">Tile::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> <a href="#l00073">Tile.h:73</a></div></div>
+<div class="ttc" id="aclass_tile_html_aebc48861c185a3308d5be39887f9d56f"><div class="ttname"><a href="class_tile.html#aebc48861c185a3308d5be39887f9d56f">Tile::SetBaseName</a></div><div class="ttdeci">void SetBaseName(std::wstring _baseName)</div><div class="ttdef"><b>Definition</b> <a href="#l00019">Tile.h:19</a></div></div>
+<div class="ttc" id="aclass_tile_html_aeeb5593bb6b75aae2edfcccbc84ab378"><div class="ttname"><a href="class_tile.html#aeeb5593bb6b75aae2edfcccbc84ab378">Tile::Tile</a></div><div class="ttdeci">Tile()</div><div class="ttdef"><b>Definition</b> <a href="#l00013">Tile.h:13</a></div></div>
+<div class="ttc" id="aclass_tile_html_af1be4ddce24e3060a7cf60bc3a03cdb4"><div class="ttname"><a href="class_tile.html#af1be4ddce24e3060a7cf60bc3a03cdb4">Tile::sharedMemDC</a></div><div class="ttdeci">HDC sharedMemDC</div><div class="ttdef"><b>Definition</b> <a href="#l00074">Tile.h:74</a></div></div>
+<div class="ttc" id="aobject_8h_html"><div class="ttname"><a href="object_8h.html">object.h</a></div></div>
+<div class="ttc" id="aobject_8h_html_a842c5e2e69277690b064bf363c017980"><div class="ttname"><a href="object_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a></div><div class="ttdeci">ObjectType</div><div class="ttdef"><b>Definition</b> <a href="object_8h_source.html#l00017">object.h:17</a></div></div>
+<div class="ttc" id="aobject_8h_html_a842c5e2e69277690b064bf363c017980ae1e4c8c9ccd9fc39c391da4bcd093fb2"><div class="ttname"><a href="object_8h.html#a842c5e2e69277690b064bf363c017980ae1e4c8c9ccd9fc39c391da4bcd093fb2">ObjectType::Block</a></div><div class="ttdeci">@ Block</div><div class="ttdef"><b>Definition</b> <a href="object_8h_source.html#l00022">object.h:22</a></div></div>
+<div class="ttc" id="apch_8h_html_a4b192593580947fa155b1fba7517c49b"><div class="ttname"><a href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a></div><div class="ttdeci">#define GET_SINGLE(classname)</div><div class="ttdef"><b>Definition</b> <a href="pch_8h_source.html#l00013">pch.h:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="_tile_8h.html">Tile.h</a></li>
+    <li class="footer">Îã§ÏùåÏóê ÏùòÌï¥ ÏÉùÏÑ±Îê® :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

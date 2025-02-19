@@ -28,5 +28,7 @@ private:
     bool grid = true;                // 그리드 표시 on/off
     bool isActive_;
     bool isMapEdit_;
-    
+    utils ut;
+    int* path;
+    int pathLength;
 };

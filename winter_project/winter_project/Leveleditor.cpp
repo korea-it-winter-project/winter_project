@@ -3,53 +3,59 @@
 #include <fstream> // ofstream, ifstream 등
 #include "ResourceManager.h"
 #include "ToolUi.h"
+#include "MonsterSpawner.h"
+#include "MapData.h"
 
 
 // 생성자: 타일 배열 초기화 및 기본 타일 설정
 Leveleditor::Leveleditor() {
-    // MapData를 통해 타일 배열을 초기화 (모든 타일 0으로)
-    //GET_SINGLE( MapData )->Clear( 0 );
-    // 시작 타일 종류 설정 (예: 1)
     selectedTile = -9;
 }
 
 // 소멸자
 Leveleditor::~Leveleditor() {
-    // 필요 시 소멸자에서 자원 해제 코드 추가
+
 }
 
- void Leveleditor::Init() {
-     isActive_ = false;
-     isMapEdit_ = false;
+void Leveleditor::Init() {
+    //GET_SINGLE( MonsterSpawner )->Init();
+    isActive_ = false;
+    isMapEdit_ = false;
     // MapData를 통해 파일에서 맵 데이터를 로드
     GET_SINGLE( MapData )->LoadFromFileText( "map.csv" );
-    for (int y = 0; y < MAP_ROWS; ++y)
+
+    const int( &mapRef )[ MAP_ROWS ][ MAP_COLS ] = GET_SINGLE( MapData )->GetMap();
+    ut.RunPathfinding( &mapRef[ 0 ][ 0 ],MAP_ROWS,MAP_COLS );
+
+    for ( int y = 0; y < MAP_ROWS; ++y )
     {
-        for (int x = 0; x < MAP_COLS; ++x)
+        for ( int x = 0; x < MAP_COLS; ++x )
         {
             // CSV에서 읽은 타일 값
-            int tileValue = GET_SINGLE(MapData)->GetTile(x, y);
-            //if (tileValue != -9)
+            int tileValue = GET_SINGLE( MapData )->GetTile( x,y );
+            if ( tileValue != -9 )
             {
-                // ObjectManager를 통해 Tile 객체 생성
-                Tile* tile = GET_SINGLE(ObjectManager)->CreateObject<Tile>();
+                 //ObjectManager를 통해 Tile 객체 생성
+                Tile* tile = GET_SINGLE( ObjectManager )->CreateObject<Tile>();
                 // 타일의 위치는 그리드 좌표이며, 실제 픽셀 좌표는 TILE_SIZE를 곱해 계산
-                tile->SetPos(Vector{ static_cast<float>(x), static_cast<float>(y) });
-                tile->SetSize(Vector{ static_cast<float>(TILE_SIZE), static_cast<float>(TILE_SIZE) });
-                switch (GET_SINGLE(MapData)->GetTile(x, y)) {
-                case -9: tile->SetBaseName(L"dirt_"); break;  // 흙(벽)
-                case 2: tile->SetBaseName(L"stone_"); break; // 돌(길)
-                default: break;
-                }
-                GET_SINGLE(ObjectManager)->Add(tile);
+                tile->SetPos( Vector{ static_cast< float >( x ), static_cast< float >( y ) } );
+                tile->SetSize( Vector{ static_cast< float >( TILE_SIZE ), static_cast< float >( TILE_SIZE ) } );
                 // Tile::Update()에서 MapData를 참조하여 auto tile index 등을 계산
+                GET_SINGLE( ObjectManager )->Add( tile );
             }
         }
     }
+    //path = ut.GetPath();
+    //pathLength = ut.GetPathLength();
+    //GET_SINGLE( MonsterSpawner )->Init( path,pathLength-1 );
+    //GET_SINGLE( MonsterSpawner )->SpawnMonster();
 }
 
 void Leveleditor::Update() {
+    //GET_SINGLE( MonsterSpawner )->Update();
     // Delete 키로 맵 데이터 초기화
+    //GET_SINGLE( MonsterSpawner )->Update();
+
     if ( GetAsyncKeyState( VK_DELETE ) & 0x0001 ) {
         if ( MessageBox( nullptr,TEXT( "※맵 데이터를 초기화하시겠습니까?" ),TEXT( "주의" ),
             MB_YESNO | MB_ICONWARNING ) == IDYES )
@@ -88,29 +94,44 @@ void Leveleditor::Update() {
             int tileY = pt.y / TILE_SIZE;
             if (GET_SINGLE(MapData)->GetTile(tileX, tileY)) return;
             GET_SINGLE(MapData)->SetTile(tileX, tileY, selectedTile);
-            if (GET_SINGLE(MapData)->GetTile(tileX, tileY)==0) return;
+            if (GET_SINGLE(MapData)->GetTile(tileX, tileY) == 0) return;
 
-            
-                printf("%d", GET_SINGLE(MapData)->GetTile(tileX, tileY));
-                Tile* _tile = GET_SINGLE(ObjectManager)->CreateObject<Tile>();
-                _tile->SetPos(Vector{ (float)tileX,(float)tileY });
-                _tile->SetSize(Vector{ TILE_SIZE, TILE_SIZE });
-                //_tile->SetBmp(pBmp);
-                switch (GET_SINGLE(MapData)->GetTile(tileX, tileY)) { 
-                case -9: _tile->SetBaseName(L"dirt_"); break;  // 흙(벽)
-                case 2: _tile->SetBaseName(L"stone_"); break; // 돌(길)
-                default: break;
-                }
-                GET_SINGLE(ObjectManager)->Add(_tile);
-            
+
+            printf("%d", GET_SINGLE(MapData)->GetTile(tileX, tileY));
+            Tile* _tile = GET_SINGLE(ObjectManager)->CreateObject<Tile>();
+            _tile->SetPos(Vector{ (float)tileX,(float)tileY });
+            _tile->SetSize(Vector{ TILE_SIZE, TILE_SIZE });
+            //_tile->SetBmp(pBmp);
+            switch (GET_SINGLE(MapData)->GetTile(tileX, tileY)) {
+            case -9: _tile->SetBaseName(L"dirt_"); break;  // 흙(벽)
+            case 1: _tile->SetBaseName(L"stone_"); break; // 돌(길)
+            default: break;
+            }
+            GET_SINGLE(ObjectManager)->Add(_tile);
+
         }
     }
+    //if ( GetAsyncKeyState( VK_LBUTTON ) & 0x8000 ) {
+    //    int tileX = pt.x / TILE_SIZE;
+    //    int tileY = pt.y / TILE_SIZE;
+    //    if ( GET_SINGLE( MapData )->GetTile( tileX,tileY ) ) return;
+    //    GET_SINGLE( MapData )->SetTile( tileX,tileY,selectedTile );
+    //    if (GET_SINGLE(MapData)->GetTile(tileX, tileY) == 0) return;
+
+    //    printf( "%d",GET_SINGLE( MapData )->GetTile( tileX,tileY ) );
+
+    //    Tile* _tile = GET_SINGLE( ObjectManager )->CreateObject<Tile>();
+    //    _tile->SetPos( Vector{ ( float ) tileX,( float ) tileY } );
+    //    _tile->SetSize( Vector{ TILE_SIZE, TILE_SIZE } );
+    //    //_tile->SetBmp(pBmp);
+    //    GET_SINGLE( ObjectManager )->Add( _tile );
+    //}
     switch (GET_SINGLE(ToolUi)->GetNum()) {
     case 1:
         selectedTile = -9;
         break;
     case 2:
-        selectedTile = 2;
+        selectedTile = 1;
         break;
     case 10:
         selectedTile = 10;
@@ -119,16 +140,6 @@ void Leveleditor::Update() {
         GET_SINGLE(MapData)->Clear();
         break;
     }
-    //// 숫자 키(1, 2, 0)를 이용하여 타일 종류 선택
-    //if ( GetAsyncKeyState( '1' ) & 0x0001 ) {
-    //    selectedTile = -9;
-    //}
-    //else if ( GetAsyncKeyState( '2' ) & 0x0001 ) {
-    //    selectedTile = 2;
-    //}
-    //else if ( GetAsyncKeyState( '0' ) & 0x0001 ) {
-    //    selectedTile = -10;
-    //}
 }
 
 void Leveleditor::Render( HDC hdc ) {

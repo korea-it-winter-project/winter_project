@@ -135,6 +135,12 @@
     <ClInclude Include="UIobject.h">
       <Filter>소스 파일\05.object</Filter>
     </ClInclude>
+    <ClInclude Include="TextOjbect.h">
+      <Filter>소스 파일\05.object</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterSpawner.h">
+      <Filter>소스 파일\99.Hader</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

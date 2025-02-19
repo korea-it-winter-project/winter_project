@@ -14,19 +14,22 @@ class MapData
 {
     DECLARE_SINGLE( MapData );
 public:
+
+    const int( &GetMap() const )[ MAP_ROWS ][ MAP_COLS ]{
+     return _map;
+    }
+
+
     // 맵 데이터와 인덱스 모두 초기화 (타일 값는 value, 인덱스는 -1로 초기화)
     void Clear( int value = 0 ) {
         for ( int y = 0; y < MAP_ROWS; ++y )
         {
-            for ( int x = 0; x < MAP_ROWS; ++x )
+            for ( int x = 0; x < MAP_COLS; ++x )
             {
                 _map[ y ][ x ] = value;
                 _autoTileIndices[ y ][ x ] = -1;
             }
         }
-
-        GET_SINGLE(ObjectManager)->clear();
-        
     };
 
     // 맵 범위 체크 후 타일 값 설정 및 인접 타일의 오토 인덱스 재계산
@@ -47,6 +50,12 @@ public:
     int GetTile( int x,int y ) const {
         if ( x < 0 || x >= MAP_COLS ) return 0;
         if ( y < 0 || y >= MAP_ROWS ) return 0;
+        int* rmap = new int[x*y];
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+				rmap[i * x + j] = _map[i][j] == 0?-9:0;
+            }
+        }
         return _map[ y ][ x ];
     };
 
@@ -150,9 +159,9 @@ private:
         bool leftEmpty = !( mask & ( 1 << 3 ) );
 
         // 디버그 출력
-        /*std::cout << "[x=" << x << ",y=" << y
+        std::cout << "[x=" << x << ",y=" << y
             << "] upE=" << upEmpty << " rightE=" << rightEmpty
-            << " downE=" << downEmpty << " leftE=" << leftEmpty << std::endl;*/
+            << " downE=" << downEmpty << " leftE=" << leftEmpty << std::endl;
 
         int autoIndex = 0;
         // 아래만 비어있는 경우 → 원래 0~2 범위 중 랜덤 선택
@@ -241,7 +250,7 @@ private:
         _autoTileIndices[ y ][ x ] = autoIndex;
     }
 
-    // 전체 맵에 대해 오토 타일 인덱스 계산 (보통 CSV 파일 로드 후 호출)
+    // 전체 맵에 대해 오토 타일 인덱스 계산
     void ComputeAllAutoTileIndices() {
         for ( int y = 0; y < MAP_ROWS; ++y )
         {

@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: ToolUi.h ÏÜåÏä§ ÌååÏùº</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Í≤ÄÏÉâ" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Îã§ÏùåÏóê ÏùòÌï¥ ÏÉùÏÑ±Îê® :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_tool_ui_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Î°úÎî©Ï§ë...</div>
+<div class="SRStatus" id="Searching">Í≤ÄÏÉâÏ§ë...</div>
+<div class="SRStatus" id="NoMatches">ÏùºÏπòÌïòÎäîÍ≤É ÏóÜÏùå</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ToolUi.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_tool_ui_8h.html">Ïù¥ ÌååÏùºÏùò Î¨∏ÏÑúÌôî ÌéòÏù¥ÏßÄÎ°ú Í∞ÄÍ∏∞</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="pch_8h.html">pch.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_tool_ui.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="class_tool_ui.html">ToolUi</a> {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a1e943318b239dbf0f82cd203bca988ce">    5</a></span>    <a class="code hl_function" href="class_tool_ui.html#a1e943318b239dbf0f82cd203bca988ce">DECLARE_SINGLE</a>(<a class="code hl_class" href="class_tool_ui.html">ToolUi</a>);</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">    7</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a3a1a5e6a405bd70b23f69f3d6602e907">    8</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#a3a1a5e6a405bd70b23f69f3d6602e907">rect</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">    9</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">   10</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">   11</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">   12</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">   13</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a0e9334f65d3b2e50f0589511e8f08d6d">   14</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#a0e9334f65d3b2e50f0589511e8f08d6d">slotFiveRect</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a3a8975799225ccb62653a143c59e7fef">   15</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#a3a8975799225ccb62653a143c59e7fef">slotSixRect</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">   16</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a07ea1aff36000eaaaacb986ee9e84690">   17</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#a07ea1aff36000eaaaacb986ee9e84690">slotEightRect</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">   18</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">slotNineRect</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">   19</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">eraserRect</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_tool_ui.html#aa80ac06e6ad69a19cf7d46b5beaefc25">   20</a></span>    RECT <a class="code hl_variable" href="class_tool_ui.html#aa80ac06e6ad69a19cf7d46b5beaefc25">resetRect</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a9db27ba043a849fcdb17e1d511e57bee">   21</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_tool_ui.html#a9db27ba043a849fcdb17e1d511e57bee">isActive_</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a365ba689cb573fc281003ece50ca8b04">   23</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_tool_ui.html#a365ba689cb573fc281003ece50ca8b04">GetNum</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a>; }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a9197bf7b47d96e08d09a592fe67a36db">   24</a></span>    RECT <a class="code hl_function" href="class_tool_ui.html#a9197bf7b47d96e08d09a592fe67a36db">GetRect</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>; }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_tool_ui.html#ad95ef1463a259abf10d94b4414d877f7">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_tool_ui.html#ad95ef1463a259abf10d94b4414d877f7">Init</a>() {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_variable" href="class_tool_ui.html#a9db27ba043a849fcdb17e1d511e57bee">isActive_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_tool_ui.html#a1b986c742f7dba23ac0b0a4590657d5a">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_tool_ui.html#a1b986c742f7dba23ac0b0a4590657d5a">Update</a>(RECT _rect) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_variable" href="class_tool_ui.html#a3a1a5e6a405bd70b23f69f3d6602e907">rect</a> = _rect;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#a3a1a5e6a405bd70b23f69f3d6602e907">rect</a>.left + 20, <a class="code hl_variable" href="class_tool_ui.html#a3a1a5e6a405bd70b23f69f3d6602e907">rect</a>.top + 50, <a class="code hl_variable" href="class_tool_ui.html#a3a1a5e6a405bd70b23f69f3d6602e907">rect</a>.left + 240, <a class="code hl_variable" href="class_tool_ui.html#a3a1a5e6a405bd70b23f69f3d6602e907">rect</a>.bottom - 80 }; <span class="comment">// µµ±∏ ≈« ≈◊µŒ∏Æ ¡¬«•</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>.left + 10, <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>.top + 10, <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>.left + 70, <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>.top + 70 }; <span class="comment">// 1π¯ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.right + 10, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.right + 70, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.bottom }; <span class="comment">// 2π¯ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.right + 10, <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.right + 70, <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.bottom }; <span class="comment">// 3π¯ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.bottom + 10, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.bottom + 70 }; <span class="comment">// 4π¯ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="class_tool_ui.html#a0e9334f65d3b2e50f0589511e8f08d6d">slotFiveRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>.bottom }; <span class="comment">// 5π¯ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="class_tool_ui.html#a3a8975799225ccb62653a143c59e7fef">slotSixRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>.bottom }; <span class="comment">// 6π¯ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>.bottom + 10, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>.bottom + 70 }; <span class="comment">// 7π¯ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_variable" href="class_tool_ui.html#a07ea1aff36000eaaaacb986ee9e84690">slotEightRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>.bottom }; <span class="comment">// 8π¯ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_variable" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">slotNineRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>.bottom }; <span class="comment">// 9π¯ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_variable" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">eraserRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>.bottom - 70, <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>.bottom - 10 }; <span class="comment">// ¡ˆøÏ∞≥ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_variable" href="class_tool_ui.html#aa80ac06e6ad69a19cf7d46b5beaefc25">resetRect</a> = { <a class="code hl_variable" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">slotNineRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">eraserRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">slotNineRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">eraserRect</a>.bottom }; <span class="comment">// √ ±‚»≠ ΩΩ∑‘ ¡¬«•</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;GetButtonDwon(<a class="code hl_enumvalue" href="_input_manager_8h.html#a41daddc55f14b699705a78e3e7f0b6d2adb9bc9c5b76e256a679eb16f64c43b9d">keytype::L_Ctrl</a>)) <a class="code hl_variable" href="class_tool_ui.html#a9db27ba043a849fcdb17e1d511e57bee">isActive_</a> = !<a class="code hl_variable" href="class_tool_ui.html#a9db27ba043a849fcdb17e1d511e57bee">isActive_</a>; <span class="comment">// øﬁ¬  ƒ¡∆Æ∑—¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;GetButtonDwon(<a class="code hl_enumvalue" href="_input_manager_8h.html#a41daddc55f14b699705a78e3e7f0b6d2aad3667d100e17257c82d34d4e29713ca">keytype::L_mouse</a>)) { <span class="comment">// ¡¬≈¨∏Ø ¿ŒΩƒ</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_tool_ui.html#a9db27ba043a849fcdb17e1d511e57bee">isActive_</a>) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>)) { <span class="comment">// 1π¯ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 1;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>)) { <span class="comment">// 2π¯ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 2;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>)) { <span class="comment">// 3π¯ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 3;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>)) { <span class="comment">// 4π¯ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 4;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#a0e9334f65d3b2e50f0589511e8f08d6d">slotFiveRect</a>)) { <span class="comment">// 5π¯ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 5;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#a3a8975799225ccb62653a143c59e7fef">slotSixRect</a>)) { <span class="comment">// 6π¯ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 6;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>)) { <span class="comment">// 7π¯ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 7;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#a07ea1aff36000eaaaacb986ee9e84690">slotEightRect</a>)) { <span class="comment">// 8π¯ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 8;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">slotNineRect</a>)) { <span class="comment">// 9π¯ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 9;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">eraserRect</a>)) { <span class="comment">// ¡ˆøÏ∞≥ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 10;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a>(<a class="code hl_class" href="class_input_manager.html">InputManager</a>)-&gt;CheckMousePoint(<a class="code hl_variable" href="class_tool_ui.html#aa80ac06e6ad69a19cf7d46b5beaefc25">resetRect</a>)) { <span class="comment">// √ ±‚»≠ ΩΩ∑‘¿ª ¥©∏¶ Ω√</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a> = 11;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordtype">wchar_t</span> debugMsg[100];</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            swprintf(debugMsg, 100, L<span class="stringliteral">&quot;SlotNum: %d\n&quot;</span>, <a class="code hl_variable" href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">slotNum</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            OutputDebugString(debugMsg);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_tool_ui.html#aba56139b6e0ddfafcdc1c9cda4828c3c">   87</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_tool_ui.html#aba56139b6e0ddfafcdc1c9cda4828c3c">Render</a>(HDC hdc) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_tool_ui.html#a9db27ba043a849fcdb17e1d511e57bee">isActive_</a>) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">toolRect</a>.bottom); <span class="comment">// µµ±∏ ≈« ≈◊µŒ∏Æ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>.bottom); <span class="comment">// 1π¯ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>.bottom); <span class="comment">// 2π¯ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>.bottom); <span class="comment">// 3π¯ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>.bottom); <span class="comment">// 4π¯ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#a0e9334f65d3b2e50f0589511e8f08d6d">slotFiveRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a0e9334f65d3b2e50f0589511e8f08d6d">slotFiveRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a0e9334f65d3b2e50f0589511e8f08d6d">slotFiveRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a0e9334f65d3b2e50f0589511e8f08d6d">slotFiveRect</a>.bottom); <span class="comment">// 5π¯ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#a3a8975799225ccb62653a143c59e7fef">slotSixRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a3a8975799225ccb62653a143c59e7fef">slotSixRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a3a8975799225ccb62653a143c59e7fef">slotSixRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a3a8975799225ccb62653a143c59e7fef">slotSixRect</a>.bottom); <span class="comment">// 6π¯ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>.bottom); <span class="comment">// 7π¯ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#a07ea1aff36000eaaaacb986ee9e84690">slotEightRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a07ea1aff36000eaaaacb986ee9e84690">slotEightRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a07ea1aff36000eaaaacb986ee9e84690">slotEightRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a07ea1aff36000eaaaacb986ee9e84690">slotEightRect</a>.bottom); <span class="comment">// 8π¯ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">slotNineRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">slotNineRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">slotNineRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">slotNineRect</a>.bottom); <span class="comment">// 9π¯ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">eraserRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">eraserRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">eraserRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">eraserRect</a>.bottom); <span class="comment">// ¡ˆøÏ∞≥ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            Rectangle(hdc, <a class="code hl_variable" href="class_tool_ui.html#aa80ac06e6ad69a19cf7d46b5beaefc25">resetRect</a>.left, <a class="code hl_variable" href="class_tool_ui.html#aa80ac06e6ad69a19cf7d46b5beaefc25">resetRect</a>.top, <a class="code hl_variable" href="class_tool_ui.html#aa80ac06e6ad69a19cf7d46b5beaefc25">resetRect</a>.right, <a class="code hl_variable" href="class_tool_ui.html#aa80ac06e6ad69a19cf7d46b5beaefc25">resetRect</a>.bottom); <span class="comment">// √ ±‚»≠ ΩΩ∑‘ ±◊∏Æ±‚</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            SetBkMode(hdc, TRANSPARENT); <span class="comment">// ≈ÿΩ∫∆Æ πË∞Ê æ¯æ⁄</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keywordtype">wchar_t</span> one[100]; <span class="comment">// 1π¯ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            swprintf(one, 100, L<span class="stringliteral">&quot;1&quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            SetTextColor(hdc, RGB(0, 0, 0));</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            DrawText(hdc, one, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">slotOneRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordtype">wchar_t</span> two[100]; <span class="comment">// 2π¯ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            swprintf(two, 100, L<span class="stringliteral">&quot;2&quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            DrawText(hdc, two, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">slotTwoRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordtype">wchar_t</span> thr[100]; <span class="comment">// 3π¯ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            swprintf(thr, 100, L<span class="stringliteral">&quot;3&quot;</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            DrawText(hdc, thr, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">slotThreeRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordtype">wchar_t</span> four[100]; <span class="comment">// 4π¯ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            swprintf(four, 100, L<span class="stringliteral">&quot;4&quot;</span>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            DrawText(hdc, four, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">slotFourRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordtype">wchar_t</span> five[100]; <span class="comment">// 5π¯ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            swprintf(five, 100, L<span class="stringliteral">&quot;5&quot;</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            DrawText(hdc, five, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#a0e9334f65d3b2e50f0589511e8f08d6d">slotFiveRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordtype">wchar_t</span> six[100]; <span class="comment">// 6π¯ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            swprintf(six, 100, L<span class="stringliteral">&quot;6&quot;</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            DrawText(hdc, six, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#a3a8975799225ccb62653a143c59e7fef">slotSixRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordtype">wchar_t</span> seven[100]; <span class="comment">// 7π¯ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            swprintf(seven, 100, L<span class="stringliteral">&quot;7&quot;</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            DrawText(hdc, seven, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">slotSevenRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordtype">wchar_t</span> eight[100]; <span class="comment">// 8π¯ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            swprintf(eight, 100, L<span class="stringliteral">&quot;8&quot;</span>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            DrawText(hdc, eight, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#a07ea1aff36000eaaaacb986ee9e84690">slotEightRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordtype">wchar_t</span> nine[100]; <span class="comment">// 9π¯ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            swprintf(nine, 100, L<span class="stringliteral">&quot;9&quot;</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            DrawText(hdc, nine, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">slotNineRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keywordtype">wchar_t</span> eraser[100]; <span class="comment">// ¡ˆøÏ∞≥ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            swprintf(eraser, 100, L<span class="stringliteral">&quot;Eraser&quot;</span>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            DrawText(hdc, eraser, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">eraserRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordtype">wchar_t</span> reset[100]; <span class="comment">// √ ±‚»≠ ΩΩ∑‘ «•±‚</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            swprintf(reset, 100, L<span class="stringliteral">&quot;Reset&quot;</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            DrawText(hdc, reset, -1, &amp;<a class="code hl_variable" href="class_tool_ui.html#aa80ac06e6ad69a19cf7d46b5beaefc25">resetRect</a>, DT_CENTER | DT_VCENTER | DT_SINGLELINE);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            SetBkMode(hdc, OPAQUE); <span class="comment">// ≈ÿΩ∫∆Æ πË∞Ê ∫π±∏</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>};</div>
+</div>
+<div class="ttc" id="a_input_manager_8h_html_a41daddc55f14b699705a78e3e7f0b6d2aad3667d100e17257c82d34d4e29713ca"><div class="ttname"><a href="_input_manager_8h.html#a41daddc55f14b699705a78e3e7f0b6d2aad3667d100e17257c82d34d4e29713ca">keytype::L_mouse</a></div><div class="ttdeci">@ L_mouse</div><div class="ttdef"><b>Definition</b> <a href="_input_manager_8h_source.html#l00005">InputManager.h:5</a></div></div>
+<div class="ttc" id="a_input_manager_8h_html_a41daddc55f14b699705a78e3e7f0b6d2adb9bc9c5b76e256a679eb16f64c43b9d"><div class="ttname"><a href="_input_manager_8h.html#a41daddc55f14b699705a78e3e7f0b6d2adb9bc9c5b76e256a679eb16f64c43b9d">keytype::L_Ctrl</a></div><div class="ttdeci">@ L_Ctrl</div><div class="ttdef"><b>Definition</b> <a href="_input_manager_8h_source.html#l00008">InputManager.h:8</a></div></div>
+<div class="ttc" id="aclass_input_manager_html"><div class="ttname"><a href="class_input_manager.html">InputManager</a></div><div class="ttdef"><b>Definition</b> <a href="_input_manager_8h_source.html#l00036">InputManager.h:36</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html"><div class="ttname"><a href="class_tool_ui.html">ToolUi</a></div><div class="ttdef"><b>Definition</b> <a href="#l00004">ToolUi.h:4</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a07ea1aff36000eaaaacb986ee9e84690"><div class="ttname"><a href="class_tool_ui.html#a07ea1aff36000eaaaacb986ee9e84690">ToolUi::slotEightRect</a></div><div class="ttdeci">RECT slotEightRect</div><div class="ttdef"><b>Definition</b> <a href="#l00017">ToolUi.h:17</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a0e9334f65d3b2e50f0589511e8f08d6d"><div class="ttname"><a href="class_tool_ui.html#a0e9334f65d3b2e50f0589511e8f08d6d">ToolUi::slotFiveRect</a></div><div class="ttdeci">RECT slotFiveRect</div><div class="ttdef"><b>Definition</b> <a href="#l00014">ToolUi.h:14</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a11db3601cca8f03b73e8fbd5d3b11d1a"><div class="ttname"><a href="class_tool_ui.html#a11db3601cca8f03b73e8fbd5d3b11d1a">ToolUi::slotOneRect</a></div><div class="ttdeci">RECT slotOneRect</div><div class="ttdef"><b>Definition</b> <a href="#l00010">ToolUi.h:10</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a150386559bedd1f2a8e32d2b8ddf25b8"><div class="ttname"><a href="class_tool_ui.html#a150386559bedd1f2a8e32d2b8ddf25b8">ToolUi::eraserRect</a></div><div class="ttdeci">RECT eraserRect</div><div class="ttdef"><b>Definition</b> <a href="#l00019">ToolUi.h:19</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a1b986c742f7dba23ac0b0a4590657d5a"><div class="ttname"><a href="class_tool_ui.html#a1b986c742f7dba23ac0b0a4590657d5a">ToolUi::Update</a></div><div class="ttdeci">void Update(RECT _rect)</div><div class="ttdef"><b>Definition</b> <a href="#l00030">ToolUi.h:30</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a1e943318b239dbf0f82cd203bca988ce"><div class="ttname"><a href="class_tool_ui.html#a1e943318b239dbf0f82cd203bca988ce">ToolUi::DECLARE_SINGLE</a></div><div class="ttdeci">DECLARE_SINGLE(ToolUi)</div></div>
+<div class="ttc" id="aclass_tool_ui_html_a25b136e364105636df9bf9ff3aac4b7b"><div class="ttname"><a href="class_tool_ui.html#a25b136e364105636df9bf9ff3aac4b7b">ToolUi::slotFourRect</a></div><div class="ttdeci">RECT slotFourRect</div><div class="ttdef"><b>Definition</b> <a href="#l00013">ToolUi.h:13</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a365ba689cb573fc281003ece50ca8b04"><div class="ttname"><a href="class_tool_ui.html#a365ba689cb573fc281003ece50ca8b04">ToolUi::GetNum</a></div><div class="ttdeci">int GetNum()</div><div class="ttdef"><b>Definition</b> <a href="#l00023">ToolUi.h:23</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a3a1a5e6a405bd70b23f69f3d6602e907"><div class="ttname"><a href="class_tool_ui.html#a3a1a5e6a405bd70b23f69f3d6602e907">ToolUi::rect</a></div><div class="ttdeci">RECT rect</div><div class="ttdef"><b>Definition</b> <a href="#l00008">ToolUi.h:8</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a3a8975799225ccb62653a143c59e7fef"><div class="ttname"><a href="class_tool_ui.html#a3a8975799225ccb62653a143c59e7fef">ToolUi::slotSixRect</a></div><div class="ttdeci">RECT slotSixRect</div><div class="ttdef"><b>Definition</b> <a href="#l00015">ToolUi.h:15</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a57dffdb24ab79095713efff03857a246"><div class="ttname"><a href="class_tool_ui.html#a57dffdb24ab79095713efff03857a246">ToolUi::toolRect</a></div><div class="ttdeci">RECT toolRect</div><div class="ttdef"><b>Definition</b> <a href="#l00009">ToolUi.h:9</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a9197bf7b47d96e08d09a592fe67a36db"><div class="ttname"><a href="class_tool_ui.html#a9197bf7b47d96e08d09a592fe67a36db">ToolUi::GetRect</a></div><div class="ttdeci">RECT GetRect()</div><div class="ttdef"><b>Definition</b> <a href="#l00024">ToolUi.h:24</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a9bb58d9795c5ec262c91406a6da71896"><div class="ttname"><a href="class_tool_ui.html#a9bb58d9795c5ec262c91406a6da71896">ToolUi::slotTwoRect</a></div><div class="ttdeci">RECT slotTwoRect</div><div class="ttdef"><b>Definition</b> <a href="#l00011">ToolUi.h:11</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_a9db27ba043a849fcdb17e1d511e57bee"><div class="ttname"><a href="class_tool_ui.html#a9db27ba043a849fcdb17e1d511e57bee">ToolUi::isActive_</a></div><div class="ttdeci">bool isActive_</div><div class="ttdef"><b>Definition</b> <a href="#l00021">ToolUi.h:21</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_aa80ac06e6ad69a19cf7d46b5beaefc25"><div class="ttname"><a href="class_tool_ui.html#aa80ac06e6ad69a19cf7d46b5beaefc25">ToolUi::resetRect</a></div><div class="ttdeci">RECT resetRect</div><div class="ttdef"><b>Definition</b> <a href="#l00020">ToolUi.h:20</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_ab268145eb713e33d6b84e3a9d8d85741"><div class="ttname"><a href="class_tool_ui.html#ab268145eb713e33d6b84e3a9d8d85741">ToolUi::slotThreeRect</a></div><div class="ttdeci">RECT slotThreeRect</div><div class="ttdef"><b>Definition</b> <a href="#l00012">ToolUi.h:12</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_aba56139b6e0ddfafcdc1c9cda4828c3c"><div class="ttname"><a href="class_tool_ui.html#aba56139b6e0ddfafcdc1c9cda4828c3c">ToolUi::Render</a></div><div class="ttdeci">void Render(HDC hdc)</div><div class="ttdef"><b>Definition</b> <a href="#l00087">ToolUi.h:87</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_acd208f41529e8aabeed0131061b64801"><div class="ttname"><a href="class_tool_ui.html#acd208f41529e8aabeed0131061b64801">ToolUi::slotNineRect</a></div><div class="ttdeci">RECT slotNineRect</div><div class="ttdef"><b>Definition</b> <a href="#l00018">ToolUi.h:18</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_ad95ef1463a259abf10d94b4414d877f7"><div class="ttname"><a href="class_tool_ui.html#ad95ef1463a259abf10d94b4414d877f7">ToolUi::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition</b> <a href="#l00026">ToolUi.h:26</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_af6bf086682f29f22a7a58a963260f712"><div class="ttname"><a href="class_tool_ui.html#af6bf086682f29f22a7a58a963260f712">ToolUi::slotSevenRect</a></div><div class="ttdeci">RECT slotSevenRect</div><div class="ttdef"><b>Definition</b> <a href="#l00016">ToolUi.h:16</a></div></div>
+<div class="ttc" id="aclass_tool_ui_html_af77eccba946415a145f4611caec3c117"><div class="ttname"><a href="class_tool_ui.html#af77eccba946415a145f4611caec3c117">ToolUi::slotNum</a></div><div class="ttdeci">int slotNum</div><div class="ttdef"><b>Definition</b> <a href="#l00007">ToolUi.h:7</a></div></div>
+<div class="ttc" id="apch_8h_html"><div class="ttname"><a href="pch_8h.html">pch.h</a></div></div>
+<div class="ttc" id="apch_8h_html_a4b192593580947fa155b1fba7517c49b"><div class="ttname"><a href="pch_8h.html#a4b192593580947fa155b1fba7517c49b">GET_SINGLE</a></div><div class="ttdeci">#define GET_SINGLE(classname)</div><div class="ttdef"><b>Definition</b> <a href="pch_8h_source.html#l00013">pch.h:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="_tool_ui_8h.html">ToolUi.h</a></li>
+    <li class="footer">Îã§ÏùåÏóê ÏùòÌï¥ ÏÉùÏÑ±Îê® :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

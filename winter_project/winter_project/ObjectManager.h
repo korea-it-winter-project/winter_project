@@ -12,6 +12,10 @@ public:
         clear();
     }
     void Render(HDC hdc) {
+        std::sort(_objects.begin(), _objects.end(), [](Object* a, Object* b) {
+            return a->GetLayer() < b->GetLayer();  // 레이어 값에 따라 정렬
+            });
+
         for (auto* obj : _objects) {
             obj->Render(hdc);
         }

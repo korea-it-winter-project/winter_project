@@ -22,7 +22,7 @@ public :
 		_stat.MaxHP = 100;
 		_stat.speed = 100;
 	};
-	virtual void Update() override {
+	virtual void Update(float dTime) override {
 		float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
 		if (GET_SINGLE(InputManager)->GetButton(keytype::A))
 			_pos.x -= _stat.speed * deltaTime;

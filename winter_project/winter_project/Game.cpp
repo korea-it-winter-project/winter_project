@@ -13,7 +13,7 @@
 
 Game::Game() {
     // 생성자 구현
-    int* p = new int();
+    //int* p = new int();
 }
 
 Game::~Game() {
@@ -40,6 +40,7 @@ void Game::Init(HWND hwnd) {
     GET_SINGLE(ResourceManager)->LoadImagesIntoManager(L"..\\Projectile");
     GET_SINGLE(ResourceManager)->LoadImagesIntoManager(L"..\\Stone");
     GET_SINGLE(ResourceManager)->LoadImagesIntoManager(L"..\\Uiicon");
+    GET_SINGLE(ResourceManager)->LoadImagesIntoManager(L"..\\Monster");
 
     GET_SINGLE(ToolUi)->Init();
     GET_SINGLE(BackScene)->Init();
@@ -49,28 +50,19 @@ void Game::Init(HWND hwnd) {
 
 void Game::Update() {
     GET_SINGLE(TimeManager)->Update();
-    if (Gtime > 0.16f) {
-        Gtime = 0;
-        GET_SINGLE(InputManager)->Update(_rect);
-        GET_SINGLE(UiManager)->Update();
-        GET_SINGLE(SceneManager)->Update();
-        //float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
-        if (GET_SINGLE(InputManager)->GetButtonDwon(keytype::ESC))
-        {
-            GET_SINGLE(SceneManager)->ChScene(sceneType::Leveleditor);
-        }
-        const std::vector<Object*> objects = GET_SINGLE(ObjectManager)->GetObjects();
-        for (Object* object : objects)
-            object->Update();
+    
+    GET_SINGLE(InputManager)->Update(_rect);
+    GET_SINGLE(UiManager)->Update();
+    GET_SINGLE(SceneManager)->Update();
+    //float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
 
-        //if (GET_SINGLE(BackScene)->GetBackScene()) { // 전 화면으로 돌아가기
-        //    GET_SINGLE(SceneManager)->ChLastScene();
-        //}
-
-        GET_SINGLE(ToolUi)->Update(_rect);
-        GET_SINGLE(BackScene)->Update(_rect);
-    }
-	Gtime += GET_SINGLE(TimeManager)->GetDeltaTime();
+    GET_SINGLE(ToolUi)->Update(_rect);
+    GET_SINGLE(BackScene)->Update(_rect);
+    
+    const std::vector<Object*> objects = GET_SINGLE(ObjectManager)->GetObjects();
+    for (Object* object : objects)
+        object->Update(GET_SINGLE(TimeManager)->GetDeltaTime());
+	//Gtime += GET_SINGLE(TimeManager)->GetDeltaTime();
 }
 
 void Game::Render() {
@@ -99,6 +91,9 @@ void Game::Render() {
     }
 
     const std::vector<Object*> objects = GET_SINGLE(ObjectManager)->GetObjects();
+    std::sort(objects.begin(), objects.end(), [](Object* a, Object* b) {
+        return a->GetLayer() < b->GetLayer();  // 레이어 값에 따라 정렬
+        });
     for (Object* object : objects)
         object->Render(_hdcBack);
     GET_SINGLE(ToolUi)->Render(_hdcBack);

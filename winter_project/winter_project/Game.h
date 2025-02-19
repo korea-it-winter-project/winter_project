@@ -14,6 +14,7 @@ public:
 	void Update();
 	void Render();
 	void SceneSzieCH(HWND hwnd);
+	float getDeltaTime() { return deltaTime; }
 	float Gtime;
 	float deltaTime;
 private:

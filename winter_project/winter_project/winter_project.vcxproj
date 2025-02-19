@@ -183,6 +183,7 @@
     <ClInclude Include="Leveleditor.h" />
     <ClInclude Include="MapData.h" />
     <ClInclude Include="monster.h" />
+    <ClInclude Include="MonsterSpawner.h" />
     <ClInclude Include="object.h" />
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="pch.h" />
@@ -193,6 +194,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="StartScene.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TextOjbect.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TimeManager.h" />
     <ClInclude Include="ToolUi.h" />

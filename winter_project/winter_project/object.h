@@ -31,7 +31,7 @@ public:
     virtual ~Object() {}
 
     virtual void Init() {};
-    virtual void Update() {
+    virtual void Update(float dTime) {
 
     };
     virtual void Render(HDC hdc) {
@@ -61,7 +61,8 @@ public:
 
     void SetBmp(std::shared_ptr<Gdiplus::Bitmap> _pBmp) { pBmp = _pBmp; }
     std::shared_ptr<Gdiplus::Bitmap> GetBmp() { return pBmp; }
-
+    int GetLayer() const { return _layer; }
+    void SetLayer(int layer) { _layer = layer; }
 
     // 체력 관련 함수
     void TakeDamage(UINT32 dmg) {
@@ -94,5 +95,6 @@ protected:
     Vector _size = { 0.0f, 0.0f };       // 크기
     Collider* _collider;
     std::shared_ptr<Gdiplus::Bitmap> pBmp;
+    int _layer = 0;
 };
 

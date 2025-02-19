@@ -20,7 +20,7 @@ public:
         baseName = _baseName;
     }
 
-    virtual void Update() override {
+    virtual void Update(float dTime){
         //if (time > 0.5f) {
             time = 0;
             int autoIndex = GET_SINGLE(MapData)->GetAutoTileIndex(_pos.x, _pos.y);

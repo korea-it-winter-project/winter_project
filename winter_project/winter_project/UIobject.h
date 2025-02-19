@@ -7,6 +7,7 @@
 #include "pch.h"
 #include "ResourceManager.h"
 
+
 static class UiObject : public Object {
 public:
     UiObject() : Object(ObjectType::Ui), hBitmap(nullptr), sharedMemDC(nullptr), isShow(true), width(0), height(0) {}
@@ -36,7 +37,7 @@ public:
     }
 
     // 업데이트: UI 요소의 동작을 처리
-    virtual void Update() override {
+    virtual void Update(float dTime) override {
         if (hBitmapCache.find(bitmap_name) == hBitmapCache.end()) {
             // 비트맵이 캐시되지 않았으면 새로운 비트맵을 캐시하고, hBitmap에 저장
             HBITMAP newBitmap = ConvertToHBITMAP(pBmp); // 예시: 이미지를 비트맵으로 변환
@@ -73,6 +74,7 @@ public:
 
         SelectObject(sharedMemDC, oldBitmap);
     }
+
 
     // UI 오브젝트의 이름 설정
     void setName(std::wstring _name) {
