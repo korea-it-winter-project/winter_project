@@ -18,8 +18,16 @@ public:
     const int( &GetMap() const )[ MAP_ROWS ][ MAP_COLS ]{
      return _map;
     }
-
-
+    int* GetMap2() {
+        int* date= new int[(MAP_ROWS + 2) * (MAP_COLS + 2)];
+		for (int i = 0; i < (MAP_ROWS + 2) * (MAP_COLS + 2); i++) *(date+i) = -9;
+		for (int i = 0; i < MAP_ROWS; i++) {
+			for (int j = 0; j < MAP_COLS; j++) {
+				*(date + (i + 1) * (MAP_COLS + 2) + j + 1) = _map[i][j] == 0 ? -9 : _map[i][j]==2?1:_map[i][j]==1?0:_map[i][j];
+			}
+		}
+		return date;
+    }
     // 맵 데이터와 인덱스 모두 초기화 (타일 값는 value, 인덱스는 -1로 초기화)
     void Clear( int value = 0 ) {
         for ( int y = 0; y < MAP_ROWS; ++y )
@@ -50,12 +58,6 @@ public:
     int GetTile( int x,int y ) const {
         if ( x < 0 || x >= MAP_COLS ) return 0;
         if ( y < 0 || y >= MAP_ROWS ) return 0;
-        int* rmap = new int[x*y];
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-				rmap[i * x + j] = _map[i][j] == 0?-9:0;
-            }
-        }
         return _map[ y ][ x ];
     };
 

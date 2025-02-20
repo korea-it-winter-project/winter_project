@@ -10,6 +10,7 @@
 #include "ToolUi.h"
 #include "StartScene.h"
 #include "BackScene.h"
+#include <Windows.h>
 
 Game::Game() {
     // 생성자 구현
@@ -45,7 +46,9 @@ void Game::Init(HWND hwnd) {
     GET_SINGLE(ToolUi)->Init();
     GET_SINGLE(BackScene)->Init();
 
-    GET_SINGLE(SceneManager)->ChScene(sceneType::StartScene);
+    GET_SINGLE(SceneManager)->ChScene(sceneType::Leveleditor);
+    printf("=========로딩중=======\n");
+    Sleep(500);
 }
 
 void Game::Update() {
@@ -90,19 +93,21 @@ void Game::Render() {
         GET_SINGLE(ResourceManager)->DrawImageWithAlpha(graphics, image, drawX, drawY, TILE_SIZE, TILE_SIZE, 0.5f);
     }
 
-    const std::vector<Object*> objects = GET_SINGLE(ObjectManager)->GetObjects();
+    std::vector<Object*> objects = GET_SINGLE(ObjectManager)->GetObjects(); // 복사본 생성
     std::sort(objects.begin(), objects.end(), [](Object* a, Object* b) {
-        return a->GetLayer() < b->GetLayer();  // 레이어 값에 따라 정렬
+        return a->GetLayer() < b->GetLayer();
         });
-    for (Object* object : objects)
+                 
+    for (Object* object : objects) {
         object->Render(_hdcBack);
+    }
     GET_SINGLE(ToolUi)->Render(_hdcBack);
     GET_SINGLE(BackScene)->Render(_hdcBack);
 
     WCHAR str[1024];
     wsprintfW(str, L"fps:[%04d] ",fps);
     ::TextOut(_hdcBack, 20, 10, str, lstrlen(str));
-
+    //printf("%8lf/", deltaTime);
 
     // 백버퍼 -> 화면
     ::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack, 0, 0, SRCCOPY);

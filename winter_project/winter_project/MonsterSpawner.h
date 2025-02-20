@@ -48,7 +48,7 @@ public:
 
 	void SpawnMonster() {
 		Monster* monster = GET_SINGLE( ObjectManager )->CreateObject<Monster>( path,pathLength );
-		monster->SetPos( Vector{ 50,50 } );
+		monster->SetPos( Vector{ 0,0 } );
 		monster->SetSize( Vector{ 25,25 } );
 		monster->SetCollider( new BoxCollider( monster,monster->GetSize() ) );
 		GET_SINGLE( ObjectManager )->Add( monster );

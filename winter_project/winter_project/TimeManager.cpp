@@ -12,7 +12,7 @@ void TimeManager::Update()
 	UINT64 currentCount;
 	::QueryPerformanceCounter(reinterpret_cast<LARGE_INTEGER*>(&currentCount));
 
-	_deltaTime = (currentCount - _prevCount) / static_cast<float>(_frequency);
+	_deltaTime = (currentCount - _prevCount)  / (static_cast<float>(_frequency));
 
 	_prevCount = currentCount;
 

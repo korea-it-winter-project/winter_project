@@ -65,14 +65,14 @@ public:
     // 메모리 할당 및 예외 처리
     int* dat = nullptr;
     try {
-        dat = new int[MR * MC];
+        dat = new int[(MR ) * (MC )];
     } catch (std::bad_alloc& e) {
         std::cerr << "Error: Memory allocation failed: " << e.what() << std::endl;
         return;
     }
 
     // 데이터 복사
-    for (int i = 0; i < MR * MC; i++) {
+    for (int i = 0; i < (MR ) * (MC ); i++) {
         dat[i] = MainMap[i];
     }
         for (int i = 0; i < MR; i++) {
